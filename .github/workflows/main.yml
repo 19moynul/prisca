@@ -12,6 +12,6 @@ jobs:
         with:
           username: 'u104477538-prisca'
           server: 'access868316597.webspace-data.io'
-          ssh_private_key: ${{ secrets.FTP_PASSWORD }}
+          ssh_private_key: Prisca10?
           local_path: ''
           remote_path: ''
