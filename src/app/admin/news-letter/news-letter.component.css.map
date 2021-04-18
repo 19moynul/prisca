@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "news-letter.component.scss"
+    ],
+    "names": [],
+    "file": "news-letter.component.css"
+}

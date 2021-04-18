@@ -1,0 +1,196 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    <span *ngIf="id">
+      UPDATE PRODUCT : {{ data.product_name }}
+    </span>
+    <span *ngIf="!id">
+      CREATE A NEW PRODUCT
+    </span>
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <form [formGroup]="createForm" (ngSubmit)="create()" *ngIf="data">
+      <div class="form-group">
+        <label>product name</label>
+        <input type="text" nbInput fullWidth placeholder="product name" formControlName="product_name">
+        <div class="error"
+          *ngIf="createForm.get('product_name').invalid && createForm.get('product_name').touched || createForm.get('product_name').invalid && isSubmited==true">
+          This filed is required</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 pl-0">
+          <div class="form-group">
+            <label>ingrediants</label>
+            <textarea rows="5" nbInput fullWidth placeholder="ingrediants" formControlName="ingrediants"></textarea>
+            <div class="error"
+              *ngIf="createForm.get('ingrediants').invalid && createForm.get('ingrediants').touched || createForm.get('ingrediants').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+        <div class="col-sm-6 pr-0">
+          <div class="form-group">
+            <label>short description</label>
+            <textarea rows="5" nbInput fullWidth placeholder="short description"
+              formControlName="short_description"></textarea>
+            <div class="error"
+              *ngIf="createForm.get('short_description').invalid && createForm.get('short_description').touched || createForm.get('short_description').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 pr-0 pl-0">
+          <div class="form-group">
+            <label>description</label>
+            <textarea rows="5" nbInput fullWidth placeholder="description" formControlName="description"></textarea>
+            <div class="error"
+              *ngIf="createForm.get('description').invalid && createForm.get('description').touched || createForm.get('description').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+        <div class="col-sm-4 pl-0">
+           <div class="form-group">
+             <label>offer price</label>
+             <input type="text" nbInput fullWidth placeholder="offer price" formControlName="offer_price">
+             <div class="error"
+               *ngIf="createForm.get('offer_price').invalid && createForm.get('offer_price').touched || createForm.get('offer_price').invalid && isSubmited==true">
+               This filed is required</div>
+           </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label>regular price</label>
+            <input type="text" nbInput fullWidth placeholder="regular price" formControlName="regular_price">
+            <div class="error"
+              *ngIf="createForm.get('regular_price').invalid && createForm.get('regular_price').touched || createForm.get('regular_price').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+        <div class="col-sm-4 pr-0">
+          <div class="form-group">
+            <label>subscriber price</label>
+            <input type="text" nbInput fullWidth placeholder="subscriber price" formControlName="subscriber_price" >
+            <div class="error"
+              *ngIf="createForm.get('subscriber_price').invalid && createForm.get('subscriber_price').touched || createForm.get('subscriber_price').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+        <div class="col-sm-6 pl-0">
+          <div class="form-group">
+            <label>price</label>
+            <input type="text" nbInput fullWidth placeholder="price" formControlName="price">
+            <div class="error"
+              *ngIf="createForm.get('price').invalid && createForm.get('price').touched || createForm.get('price').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+        <div class="col-sm-6 pr-0">
+          <div class="form-group">
+            <label>quantity</label>
+            <input type="text" nbInput fullWidth placeholder="quantity" formControlName="quantity">
+            <div class="error"
+              *ngIf="createForm.get('quantity').invalid && createForm.get('quantity').touched || createForm.get('quantity').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 pl-0">
+          <div class="form-group">
+            <div class="row">
+              <div class="mi-selected-image-box" *ngIf="live_main_image_url || uploaded_main_image">
+                <img [src]="live_main_image_url?live_main_image_url:imagePath+uploaded_main_image"
+                  class="mi-selected-image" alt="">
+                <i class="fas fa-times" (click)="cancelmain_image()" *ngIf="live_main_image_url"></i>
+              </div>
+              <input type="file" nbInput fullWidth #main_image (change)="main_imageUpload($event);"
+                style="display: none;">
+              <div
+                [class]="{'upload-image-button':!live_main_image_url || !uploaded_main_image,'upload-image-button-with-image':live_main_image_url || uploaded_main_image}">
+                <button nbButton status="danger" (click)="main_image.click();$event.preventDefault()">Upload
+                 main image</button>
+              </div>
+            </div>
+            <div class="error"
+              *ngIf="createForm.get('main_image').invalid && createForm.get('main_image').touched || createForm.get('main_image').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+        <div class="col-sm-6 pr-0">
+           <div class="form-group">
+             <div class="row">
+               <div class="mi-selected-image-box" *ngIf="live_details_image_url || uploaded_details_image">
+                 <img [src]="live_details_image_url?live_details_image_url:imagePath+uploaded_details_image"
+                   class="mi-selected-image" alt="">
+                 <i class="fas fa-times" (click)="canceldetails_image()" *ngIf="live_details_image_url"></i>
+               </div>
+               <input type="file" nbInput fullWidth #details_image (change)="details_imageUpload($event);"
+                 style="display: none;">
+               <div
+                 [class]="{'upload-image-button':!live_details_image_url || !uploaded_details_image,'upload-image-button-with-image':live_details_image_url || uploaded_main_image}">
+                 <button nbButton status="danger" (click)="details_image.click();$event.preventDefault()">Upload details
+                   image</button>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 pl-0">
+          <div class="form-group">
+            <div class="row">
+              <div *ngFor="let live_image of live_product_images">
+                <div class="mi-selected-image-box" *ngIf="live_image">
+                  <img [src]="live_image"
+                    class="mi-selected-image" alt="">
+                  <i class="fas fa-times" (click)="cancelimage()" *ngIf="live_image"></i>
+                </div>
+              </div>
+            </div>
+            <div class="error"
+              *ngIf="createForm.get('main_image').invalid && createForm.get('main_image').touched || createForm.get('main_image').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 pl-0">
+          <input type="file" nbInput fullWidth #multiple_image multiple (change)="mutipleImage($event);"
+            style="display: none;">
+          <div class="w-100 upload-image-button">
+            <button nbButton status="danger" (click)="multiple_image.click();$event.preventDefault()">Upload
+              multiple image</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-sm-3 m-auto">
+          <button nbButton status="info" class="w-100">
+             <span *ngIf="!create_on_process">
+               <span *ngIf="!id">Create</span>
+               <span *ngIf="id">Update</span>
+             </span>
+             <span *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+        </div>
+      </div>
+    </form>
+    <div class="row" *ngIf="id" style="margin-top: 100px;">
+      <div class="col-sm-6" *ngFor="let image of images" style="margin-bottom: 30px;">
+        <div class="row">
+          <div class="col-sm-7 pr-0 pl-0">
+            <img [src]="imagePath+image.image" alt="">
+          </div>
+          <div class="col-sm-5">
+            <button status="danger" class="w-100 delete-button" nbButton (click)="deleteImage(image.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+  <!--end of nb card body-->
+</nb-card>
+<!--end of nb-fc-card-->

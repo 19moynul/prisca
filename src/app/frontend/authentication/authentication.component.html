@@ -1,0 +1,192 @@
+<ngx-navbar></ngx-navbar>
+<main [class]="{'mi-auth-dark':!light_theme, 'mi-auth-light':light_theme}" >
+  <section class="auth-section">
+    <div class="container">
+      <div class="mi-auth-card">
+        <div class="login-card" *ngIf="isloginForm">
+          <div class="row mr-0 ml-0">
+            <div class="form">
+              <h3>LOGIN</h3>
+               <div class="row" *ngIf="error_message">
+                 <div class="alert alert-danger alert-dismissible fade show" role="alert"
+                   style="width: 83%;margin: 0px auto 17px auto;">
+                   {{error_message}}
+                 </div>
+               </div>
+              <form [formGroup]="loginForm">
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="email" placeholder="&#xf007; Username or email">
+                  <div class="error"
+                    *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched || registrationForm.get('email').invalid && isLoginSubmite">
+                    This filed is required</div>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" formControlName="password" placeholder="&#xf023; password">
+                  <div class="error"
+                    *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched || registrationForm.get('password').invalid && isLoginSubmite">
+                    This filed is required</div>
+                </div>
+                <div class="login-button" (click)="login()">
+                  <p *ngIf="!login_in_process"><i class="fas fa-lock"></i> login</p>
+                  <p *ngIf="login_in_process"><i class="fas fa-cog fa-spin"></i></p>
+                </div>
+              </form>
+            </div>
+            <div class="text">
+              <div class="row  ml-0">
+                <div class="icon">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="text-info">
+                  <p>If you have an account than please login here other wise create an account </p>
+                </div>
+              </div>
+              <div class="row  ml-0">
+                <div class="icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <div class="text-info">
+                  <p style="margin-top: 26px;">
+                    Having trouble ? contact with us <i><strong class="number">(+880) 17819-85376</strong></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="related-button">
+                <div class="row  ml-0">
+                  <div class="icon">
+                    <!-- <i class="fas fa-headset"></i> -->
+                  </div>
+                  <div class="text-info">
+                    <p style="margin-top: 26px;text-align: center;">
+                      Don't have an account ?
+                    </p>
+                    <div class="login-button" (click)="goToregistration()">
+                      <p>Create an account</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="registration-card" *ngIf="!isloginForm">
+            <div class="row mr-0 ml-0">
+            <div class="form">
+              <h3>SIGN UP</h3>
+              <div class="row" *ngIf="error_message_for_registration">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert"
+                  style="width: 83%;margin: 0px auto 17px auto;">
+                  {{error_message_for_registration}}
+                </div>
+              </div>
+              <form [formGroup]="registrationForm">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="&#xf007; First name"
+                    formControlName="first_name">
+                  <div class="error"
+                    *ngIf="registrationForm.get('first_name').invalid && registrationForm.get('first_name').touched || registrationForm.get('first_name').invalid && isSubmited==true">
+                    This filed is required</div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="&#xf007; Last name"
+                    formControlName="last_name">
+                  <div class="error"
+                    *ngIf="registrationForm.get('last_name').invalid && registrationForm.get('last_name').touched || registrationForm.get('last_name').invalid && isSubmited==true">
+                    This filed is required</div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="&#xf1fa; Email"
+                    formControlName="email">
+                  <div class="error"
+                    *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched || registrationForm.get('email').invalid && isSubmited==true">
+                    This filed is required</div>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="&#xf023; Password"
+                    formControlName="password">
+                  <div class="error"
+                    *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched || registrationForm.get('password').invalid && isSubmited==true">
+                    This filed is required</div>
+                </div>
+                <div class="form-group">
+                  <input type="password" placeholder="confirm password"
+                    formControlName="password_confirmation" class="form-control" placeholder="&#xf023; Confirm password">
+                  <div class="error"
+                    *ngIf="registrationForm.get('password_confirmation').invalid &&
+                    registrationForm.get('password_confirmation').touched ||
+                    registrationForm.get('password_confirmation').invalid && isSubmited==true">
+                    This filed is required</div>
+                </div>
+                <div class="row">
+                  <div class="login-button" (click)="create()">
+                    <p *ngIf="!create_on_process">Sign up</p>
+                    <p *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></p>
+                  </div>
+                  <!-- <div class="col-sm-4 m-auto">
+                    <button nbButton status="info" class="w-100"> <span *ngIf="!create_on_process"></span>SIGN UP<span
+                        *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+                  </div> -->
+                </div>
+              </form>
+            </div>
+            <div class="text">
+              <div class="row  ml-0">
+                <div class="icon">
+                  <i class="fas fa-asterisk"></i>
+                </div>
+                <div class="text-info">
+                  <p style="margin-top: 26px;">Please Fill all field properly . All fields are required</p>
+                </div>
+              </div>
+              <div class="row  ml-0">
+                <div class="icon">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="text-info">
+                  <p>Plase give your valid information . we don't share information  with anyone else . please give your <strong>valid email</strong>  we will use it to verify you</p>
+                </div>
+              </div>
+              <div class="row  ml-0">
+                <div class="icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <div class="text-info">
+                  <p style="margin-top: 26px;">
+                    Having trouble ? contact with us <i><strong class="number">(+880) 17819-85376</strong></i>
+                  </p>
+                </div>
+              </div>
+                <div class="row ml-0">
+                <div class="icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="text-info">
+                  <p style="margin-top: 26px;">For more you can read our <i><strong>privacy policy</strong></i></p>
+                </div>
+              </div>
+
+              <div class="related-button">
+                <div class="row  ml-0">
+                  <div class="icon">
+                    <!-- <i class="fas fa-headset"></i> -->
+                  </div>
+                  <div class="text-info">
+                    <p style="margin-top: 26px;text-align: center;">
+                      Already have an account ?
+                    </p>
+                    <div class="login-button" (click)="goToLogin()">
+                      <p>login</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<ngx-footer-part></ngx-footer-part>
+<nb-layout style="display: none"></nb-layout>

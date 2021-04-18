@@ -1,0 +1,47 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    Table header will go here
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <table class="table table-bordered table-striped">
+      <thead class="thead">
+        <tr>
+          <th class="tid">id</th>
+          <th class="w-80">image</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let item of data;let i=index">
+          <td>{{ i+1 }}</td>
+          <td>
+            <span *ngIf="editID !== item.id"> <img [src]="imagePath+item.image" alt="no image" class="w-30"> </span>
+            <span *ngIf="editID == item.id">
+              <form [formGroup]="editForm">
+                  <input type="file" nbInput fullWidth #image (change)="imageUpload($event);">
+              </form>
+            </span>
+          </td>
+          <td class="mi-action-button">
+            <button *ngIf="editID !== item.id" (click)="edit(item.id)" nbPopover="EDIT" nbPopoverTrigger="hover"
+              nbPopoverPlacement="bottom" class="edit"><i class="fa fa-edit"></i></button>
+            <button *ngIf="editID == item.id" class="cancel" (click)="cancel()" nbPopover="CANCEL"
+              nbPopoverTrigger="hover" nbPopoverPlacement="bottom"><i class="fas fa-times"
+                status="warning"></i></button>
+            <button *ngIf="editID == item.id" class="update" (click)="update(item.id)" nbPopover="UPDATE"
+              nbPopoverTrigger="hover" nbPopoverPlacement="bottom"><i class="fas fa-check"></i></button>
+            <button *ngIf="editID !== item.id" (click)="delete(item.id)" nbPopover="DELETE" nbPopoverTrigger="hover"
+              nbPopoverPlacement="bottom" class="delete"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+  <!--end of nb card body-->
+  <!--end of nb-card-footer-->
+</nb-card>
+<!--end of nb-fc-card-->

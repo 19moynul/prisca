@@ -1,0 +1,107 @@
+<ngx-navbar></ngx-navbar>
+<main [class]="{'mi-dark':!light_theme, 'mi-light':light_theme}">
+  <section class="banner-section">
+  <div class="mi-banner-box">
+    <div class="row">
+      <div class="left">
+        <img src="/assets/images/contact.svg" alt="" *ngIf="!light_theme">
+        <img src="/assets/images/contact-light.svg" *ngIf="light_theme">
+      </div>
+      <div class="right">
+        <h3>GET IN TOUCH</h3>
+        <p>
+          Some small text will go here . some text will go here . some here text will go here . some here text will go
+          here
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-form-section">
+  <div class="container">
+    <div class="mi-contact-box">
+      <div class="row">
+        <div class="form">
+          <h5>Contact with us</h5>
+          <form [formGroup]="contactForm" (ngSubmit)="contact()">
+            <div class="form-group">
+              <label for="">Username</label>
+              <input type="text" formControlName="username" class="form-control" placeholder="Username" >
+            </div>
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="text" formControlName="email" class="form-control"  placeholder="username@example.com">
+            </div>
+            <div class="form-group">
+              <label for="">Phone</label>
+              <input type="text" formControlName="phone" class="form-control"  placeholder="(+xxx) xxxxx-xxxxx">
+            </div>
+            <div class="form-group">
+              <label for="">Message</label>
+              <textarea class="form-control" formControlName="message"  rows="5"></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 m-auto">
+                <button nbButton class="w-100">SUBMIT</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="text">
+          <div class="row">
+            <div class="icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="info-text">
+              <p>please login first before you send us message . we take care about privacy .so that we will not publish your email and your message . we will reply to your email very soon . please use a valid email address</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="info-text">
+              <p style="margin-top: 22px;">For more you can read our <i><strong>privacy policy</strong></i></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="icon">
+              <i class="fas fa-hourglass-start"></i>
+            </div>
+            <div class="info-text">
+              <p style="margin-top: 22px;">We start at <strong class="cursive">10.00 AM</strong> and close at <strong class="cursive">8.00 PM</strong></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="info-text">
+              <p style="margin-top: 22px;">Please contact with us <i><strong class="cursive">(+8801 78198-5376)</strong></i> for more information</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-card-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let data of contactData">
+        <div class="mi-contact-card">
+          <div class="icon">
+            <p><i [class]="data.icon"></i></p>
+          </div>
+          <div class="details">
+            <h5>{{data.title}}</h5>
+            <p>{{data.information}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<ngx-footer-part></ngx-footer-part>
+<nb-layout style="display: none"></nb-layout>

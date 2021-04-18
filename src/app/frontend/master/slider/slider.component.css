@@ -1,0 +1,9 @@
+.uk-position-relative {
+  height: 70vh;
+}
+
+.uk-position-relative .uk-slideshow-items img {
+  width: 100%;
+  height: 70vh;
+}
+/*# sourceMappingURL=slider.component.css.map */

@@ -1,0 +1,63 @@
+<main [class]="{'mi-dark':!light_theme, 'mi-light':light_theme}">
+  <div class="social-section">
+  <div class="container">
+    <hr class="title-border">
+    <h2 class="title">RESTONS CONNECTÉS</h2>
+    <div class="icons">
+      <a *ngFor="let item of socials" [href]="item.link" target="_blank"><i [class]="item.icon"></i></a>
+    </div>
+  </div>
+</div>
+<div class="footer-section">
+  <div class="container-fluid">
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+      <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+        <li *ngFor="let card of footerCards">
+          <div class="uk-panel">
+            <div class="row">
+              <div class="icon">
+                <p><i [class]="card.icon"></i></p>
+              </div>
+              <div class="text">
+                <h5>{{card.title}}</h5>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+        uk-slider-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+        uk-slider-item="next"></a>
+
+    </div>
+  </div>
+  <div class="container contact-section">
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let info of contacts">
+        <div class="mi-con-card">
+          <div class="title">{{info.title}}</div>
+          <div class="border"></div>
+          <div class="border"></div>
+          <div class="text">{{info.information}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="allowed-payment-type">
+        <div class="icons">
+          <i class="fas fa-credit-card"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-amazon-pay"></i>
+        </div>
+    </div>
+  </div>
+  <div class="bottom-section">
+      <p>&copy; This website powered by SMMIT 2020 </p>
+  </div>
+</div>
+</main>
+
+

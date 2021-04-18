@@ -1,0 +1,235 @@
+<ngx-navbar></ngx-navbar>
+<div class="container">
+  <div class="row">
+    <!-- <div class="sidebar-section">
+      <div class="category">
+        <div class="title">
+          <h3>CATEGORY</h3>
+        </div>
+        <div class="options">
+          <ul>
+            <li>
+              <input type="text" nbInput status="success" style="width: 80%;border-radius: 7px 0px 0px 7px;" placeholder="Search ...">
+              <button nbButton status="success" class="search"><i class="fas fa-search"></i></button>
+            </li>
+            <li>
+              <nb-checkbox>category one</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category two</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category three</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category four</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category five</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category six</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category seven</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category eight</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category nine</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category ten</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category eleven</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category tweleve</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category thirteen</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category fourteen</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>category fifteen</nb-checkbox>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="brand">
+        <div class="title">
+          <h3>BRAND</h3>
+        </div>
+        <div class="options">
+          <ul>
+            <li>
+              <input type="text" nbInput status="success" style="width: 80%;border-radius: 7px 0px 0px 7px;" placeholder="Search ...">
+              <button nbButton status="success" class="search"><i class="fas fa-search"></i></button>
+            </li>
+            <li>
+              <nb-checkbox>brand one</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand two</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand three</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand four</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand five</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand six</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand seven</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand eight</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand nine</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand ten</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand eleven</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand tweleve</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand thirteen</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand fourteen</nb-checkbox>
+            </li>
+            <li>
+              <nb-checkbox>brand fifteen</nb-checkbox>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="price-range">
+        <div class="title">
+          <h3>PRICE RANGE</h3>
+        </div>
+        <div class="options">
+          <div data-role="rangeslider">
+            <label for="price-min">START TO:</label>
+            <input type="range" name="price-min"  min="0" max="1000"  (change)="range($event)">
+            <input type="text" id="rangePrimary" />
+            <label for="price-max">END TO:</label>
+            <input type="range" name="price-max"  min="5000" max="50000" >
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="product-section">
+      <hr class="title-border">
+      <h2 class="title">Here is our all product</h2>
+      <div class="row">
+        <ul class="uk-child-width-1-2@s ">
+          <!-- <li>
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                <img
+                  src="https://prd.dw-loreal-paris.fr/dw/image/v2/AAQP_PRD/on/demandware.static/-/Sites-lorealparis-fr-catalog/default/dwebf907ab/product/OAP7043/3600523873821/3600523873821_1_XXL.png?sw=286&sh=224&sm=fit"
+                  alt="">
+
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">Prodct name will go here</h3>
+                <p class="short-info">Sweet perfume</p>
+                <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <strong><i class="fas fa-users pl-1"></i> 10</strong>
+                </p>
+                <div class="row mr-0 ml-0">
+                  <div class="discount">
+                    <p>50%</p>
+                  </div>
+                  <div class="regular-price">
+                    <p>$1000</p>
+                  </div>
+                  <div class="final-price">
+                    <p>$500</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mi-card-footer">
+                <div class="row mr-0 ml-0">
+                  <button nbButton class="b-button" status="info"><i class="fas fa-eye pr-1 "></i>VIEW PRODUCT</button>
+                </div>
+              </div>
+            </div>
+          </li> -->
+          <li *ngFor="let product of data">
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                <img
+                  [src]="imagePath+product.main_image"
+                  alt="">
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">{{ product.product_name }}</h3>
+                <p class="short-info">Sweet perfume</p>
+                 <p class="descriptif" (click)="productDetails(product.product_name,'')">descriptif</p>
+                 <div class="price">
+                    <p (click)="productDetails(product.product_name,1)">prix sympathisant</p>
+                    <p (click)="productDetails(product.product_name,2)">prix abonné</p>
+                    <p (click)="productDetails(product.product_name,3)">prix coffret cadeau</p>
+                 </div>
+                 <div class="row mr-0 ml-0">
+                   <div class="col-sm-8 pl-0 pr-0">
+                     <p class="main-price-text">Prix à l'unité</p>
+                   </div>
+                   <div class="col-sm-4">
+                     <p class="main-price">$ {{product.price}}</p>
+                   </div>
+                 </div>
+                <!-- <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <strong><i class="fas fa-users pl-1"></i> 10</strong>
+                </p>
+                <div class="row mr-0 ml-0">
+                  <div class="discount">
+                    <p>50%</p>
+                  </div>
+                  <div class="regular-price">
+                    <p>$1000</p>
+                  </div>
+                  <div class="final-price">
+                    <p>$500</p>
+                  </div>
+                </div> -->
+              </div>
+              <div class="mi-card-footer">
+                <div class="row mr-0 ml-0">
+                  <button nbButton class="b-button" status="info"><i class="fas fa-eye pr-1 "></i>VIEW PRODUCT</button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<nb-layout style="display: none"></nb-layout>

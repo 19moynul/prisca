@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAE,AAAA,qBAAqB,CAAA;EAOrB,MAAM,EAAE,IAAI;CACX;;AARD,AAEE,qBAFmB,CACrB,mBAAmB,CACjB,GAAG,CAAA;EACD,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "slider.component.scss"
+    ],
+    "names": [],
+    "file": "slider.component.css"
+}

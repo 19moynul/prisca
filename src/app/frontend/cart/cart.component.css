@@ -1,0 +1,423 @@
+.checkout-section .container {
+  padding: 30px 0px;
+}
+
+.checkout-section .container .checkout-box {
+  padding-bottom: 30px;
+  -webkit-box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+          box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+}
+
+.checkout-section .container .checkout-box .form {
+  padding: 20px;
+  width: 50%;
+}
+
+.checkout-section .container .checkout-box .form .number-box {
+  width: 60px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.checkout-section .container .checkout-box .form .title {
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 21px;
+  margin-top: 9px;
+  padding-left: 13px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-time {
+  margin-bottom: 20px;
+}
+
+.checkout-section .container .checkout-box .form form .label-title {
+  font-family: raleway;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details {
+  padding: 20px 0px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details label {
+  text-transform: uppercase;
+  font-family: raleway;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  margin-top: -8px;
+  margin-left: 9px;
+  background: #edf1f7;
+  padding: 0px 12px;
+  color: #555;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details input {
+  padding: 0.6375rem 1rem;
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details ::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details :-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details ::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .delivery-details ::placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details {
+  padding: 20px 0px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details label {
+  text-transform: uppercase;
+  font-family: raleway;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  margin-top: -8px;
+  margin-left: 9px;
+  padding: 0px 12px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details input {
+  padding: 0.6375rem 1rem;
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details ::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details :-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details ::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .personal-details ::placeholder {
+  font-size: 14px;
+}
+
+.checkout-section .container .checkout-box .form form .submit-button {
+  padding: 12px 31px;
+  float: right;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .header .icon {
+  width: 49%;
+  padding: 13px;
+  cursor: pointer;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .header p {
+  text-align: center;
+  font-size: 38px;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .header h6 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .details {
+  padding: 22px 0px;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .details h6 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .details p {
+  font-size: 15px;
+  font-family: raleway;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .accept {
+  margin-bottom: 4px;
+  font-family: raleway;
+  font-size: 13px;
+  color: #666;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .accept span {
+  font-weight: 500;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .agreement {
+  font-family: raleway;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 0px;
+}
+
+.checkout-section .container .checkout-box .form .payment-details .submit-button {
+  padding: 12px 31px;
+  float: right;
+  margin-bottom: 25px;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box {
+  border-radius: 8px;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box .title {
+  margin-top: 0px;
+  width: 100%;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box .title .row .text {
+  width: 80%;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box .title .row .text h5 {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: -5px;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box .title .row .icon {
+  width: 20%;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box .title .row .icon p {
+  float: right;
+  margin-right: -3px;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.checkout-section .container .checkout-box .form .review-details .information-box p {
+  margin-bottom: 0px !important;
+  font-family: raleway;
+  font-size: 13px;
+  padding: 0px 13px;
+}
+
+.checkout-section .container .checkout-box .form .review-details .submit-button {
+  padding: 12px 31px;
+  float: right;
+}
+
+.checkout-section .container .checkout-box .form .welcome-section {
+  padding-top: 35px;
+}
+
+.checkout-section .container .checkout-box .form .welcome-section h4 {
+  text-align: center;
+  font-family: raleway;
+  font-size: 31px;
+}
+
+.checkout-section .container .checkout-box .form .welcome-section p {
+  text-align: center;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+.checkout-section .container .checkout-box .form .welcome-section .contact-section p:nth-child(1) {
+  margin-top: 80px;
+  font-size: 14px;
+  font-family: raleway;
+  color: #444;
+}
+
+.checkout-section .container .checkout-box .form .welcome-section .contact-section p:last-child {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.checkout-section .container .checkout-box .form .welcome-section .contact-section h5 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+
+.checkout-section .container .checkout-box .product {
+  width: 50% !important;
+  padding: 225px 15px 100px 15px;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section .table-bordered {
+  border: 2px solid #ff1274;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section thead {
+  background-color: #ff1274;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody {
+  font-family: 'raleway';
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody tr td {
+  font-size: 14px !important;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody tr td .add-min-qty {
+  background: #ff1274;
+  color: white;
+  padding: 0px 7px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody tr td .qty {
+  padding: 0px 10px;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody tr td:first-child {
+  padding: 8px 10px !important;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody tr td:last-child {
+  text-align: center;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody .subtoal {
+  background-color: #ff1274 !important;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.checkout-section .container .checkout-box .product .product-cart-section tbody .subtoal td {
+  text-align: center;
+}
+
+.mi-light {
+  background: #f5f5f5;
+}
+
+.mi-light .container .checkout-box {
+  background: #ededed;
+  -webkit-box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+          box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+}
+
+.mi-light .container .checkout-box .form {
+  padding: 20px;
+}
+
+.mi-light .container .checkout-box .form .number-box {
+  background: #ff1274;
+  color: white;
+}
+
+.mi-light .container .checkout-box .form form .delivery-time {
+  margin-bottom: 20px;
+}
+
+.mi-light .container .checkout-box .form form .delivery-details {
+  padding: 20px 0px;
+}
+
+.mi-light .container .checkout-box .form form .delivery-details label {
+  background: #edf1f7;
+  color: #555;
+}
+
+.mi-light .container .checkout-box .form form .personal-details {
+  padding: 20px 0px;
+}
+
+.mi-light .container .checkout-box .form form .personal-details label {
+  background: #edf1f7;
+  color: #555;
+}
+
+.mi-light .container .checkout-box .form .payment-details .header .icon {
+  border: 1px solid #888;
+}
+
+.mi-light .container .checkout-box .form .payment-details .header p {
+  color: #888;
+}
+
+.mi-light .container .checkout-box .form .payment-details .header h6 {
+  color: #555;
+}
+
+.mi-light .container .checkout-box .form .payment-details .header .active {
+  border: 3px solid #ff1274;
+}
+
+.mi-light .container .checkout-box .form .payment-details .header .active p {
+  color: #ff1274;
+}
+
+.mi-light .container .checkout-box .form .payment-details .header .active h6 {
+  color: #ff1274;
+}
+
+.mi-light .container .checkout-box .form .payment-details .details {
+  padding: 22px 0px;
+}
+
+.mi-light .container .checkout-box .form .payment-details .accept {
+  color: #666;
+}
+
+.mi-light .container .checkout-box .form .payment-details .accept span {
+  color: #ff1274 !important;
+}
+
+.mi-light .container .checkout-box .form .payment-details .agreement {
+  color: #666;
+}
+
+.mi-light .container .checkout-box .form .review-details .information-box {
+  border: 2px solid #ff1274;
+}
+
+.mi-light .container .checkout-box .form .review-details .information-box .title .row .text h5 {
+  color: #ff1274;
+}
+
+.mi-light .container .checkout-box .form .review-details .information-box .title .row .icon p {
+  color: #ff1274;
+}
+
+.mi-light .container .checkout-box .form .welcome-section h4 {
+  color: #ff1274;
+}
+
+.mi-light .container .checkout-box .form .welcome-section .contact-section p:nth-child(1) {
+  color: #444;
+}
+
+.mi-light .container .checkout-box .form .welcome-section .contact-section h5 {
+  color: #ff1274;
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.square-form {
+  margin-top: -34px !important;
+}
+/*# sourceMappingURL=cart.component.css.map */

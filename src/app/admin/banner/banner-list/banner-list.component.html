@@ -1,0 +1,44 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    All banner list
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <table class="table table-bordered table-striped">
+      <thead class="thead">
+        <tr>
+          <th class="tid">id</th>
+          <th class="w-15">image</th>
+          <th class="w-25">title</th>
+          <th class="w-25">subtitle</th>
+          <th class="w-15">Action</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let item of data;let i=index">
+          <td>{{ i+1 }}</td>
+          <td>
+            <img [src]="imagePath+item.image" alt="no image" srcset="">
+          </td>
+          <td>{{ item.title }}</td>
+          <td>{{ item.subtitle }}</td>
+          <td class="mi-action-button">
+            <button (click)="edit(item.id)" nbPopover="EDIT" nbPopoverTrigger="hover" nbPopoverPlacement="bottom"
+              class="edit"><i class="fa fa-edit"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+  <!--end of nb card body-->
+  <nb-card-footer>
+    <!--nb-card footer started-->
+    <!-- <ngb-pagination [collectionSize]="totalLength" [pageSize]="limit" [(page)]="page" aria-label="Default pagination"
+      (pageChange)="getData()"></ngb-pagination> -->
+  </nb-card-footer>
+  <!--end of nb-card-footer-->
+</nb-card>
+<!--end of nb-fc-card-->

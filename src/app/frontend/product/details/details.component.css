@@ -1,0 +1,238 @@
+.banner-section img {
+  width: 100%;
+}
+
+.banner-section h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+}
+
+.banner-section .short-description {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.banner-section .short-description p {
+  color: #666;
+  font-family: raleway;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.ingrediants {
+  width: 55%;
+  margin: 10px auto 50px auto;
+}
+
+.ingrediants .text {
+  font-family: raleway;
+  line-height: 23px;
+}
+
+.main-section {
+  padding-bottom: 100px;
+}
+
+.main-section .image-list {
+  width: 20%;
+}
+
+.main-section .image-list ul li {
+  list-style: none;
+  border: 1px solid #eeeeee;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-section .image-box {
+  width: 78%;
+  margin-left: 2%;
+}
+
+.main-section .image-box img {
+  width: 100%;
+  border: 1px solid #eeeeee;
+}
+
+.main-section .details {
+  padding: 0px 20px;
+}
+
+.main-section .details h6 {
+  text-transform: uppercase;
+  font-size: 27px;
+  font-family: Open Sans, sans-serif;
+}
+
+.main-section .details h6 span {
+  color: red;
+}
+
+.main-section .details p {
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #888;
+}
+
+.main-section .details p i {
+  color: #ffc94d;
+  margin-right: 5px;
+}
+
+.main-section .details p strong {
+  color: #8d8d8d;
+}
+
+.main-section .details p strong i {
+  color: #8d8d8d;
+  margin-right: 2px;
+}
+
+.main-section .details .review {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main-section .details .colors {
+  margin-bottom: 25px;
+}
+
+.main-section .details .colors p {
+  font-family: raleway;
+  color: #888;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.main-section .details .colors .color-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 4px 0px #555;
+          box-shadow: 1px 1px 4px 0px #555;
+  margin-right: 12px;
+}
+
+.main-section .details .colors .active {
+  border: 2px solid #000e47;
+}
+
+.main-section .details .colors :last-child {
+  margin-right: 0px;
+}
+
+.main-section .details .quantity-section {
+  width: 76.5%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.main-section .details .quantity-section .row button {
+  width: 10%;
+  margin-right: -5px;
+}
+
+.main-section .details .quantity-section .row input {
+  width: 74%;
+  border-radius: 0px;
+}
+
+.main-section .details .add-to-cart {
+  width: 76%;
+}
+
+.main-section .details .delivery-section {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 19px 0px;
+  padding: 13px 0px;
+}
+
+.main-section .details .delivery-section .delivery-fees {
+  width: 50%;
+}
+
+.main-section .details .delivery-section .row .icon {
+  width: 20%;
+}
+
+.main-section .details .delivery-section .row .icon i {
+  font-size: 20px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.main-section .details .delivery-section .row .text {
+  width: 80%;
+}
+
+.main-section .details .delivery-section .row .text h6 {
+  font-family: raleway;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.main-section .details .delivery-section .row .text p {
+  margin-bottom: 0px;
+  margin-top: -6px;
+  font-weight: 600;
+}
+
+.main-section .details .delivery-section .free-delivery {
+  width: 33%;
+}
+
+.main-section .details .delivery-section .gift-pack {
+  width: 33%;
+}
+
+.details-section {
+  background: #ecfffc;
+  padding: 80px 0px;
+}
+
+.details-section .title-border {
+  border-bottom: 1px solid #888;
+}
+
+.details-section .title {
+  width: 31%;
+  margin: -24px auto 40px auto;
+  text-align: center;
+  background: #ecfffc;
+}
+
+.details-section .text {
+  width: 60%;
+  overflow: hidden;
+}
+
+.details-section .text p {
+  font-family: raleway;
+  font-weight: 400;
+  color: #555;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.details-section .image {
+  width: 40%;
+  padding: 5px 50px;
+}
+
+.details-section .image img {
+  width: 100%;
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+/*# sourceMappingURL=details.component.css.map */

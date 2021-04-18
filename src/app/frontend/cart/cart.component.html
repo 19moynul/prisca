@@ -1,0 +1,344 @@
+<ngx-navbar></ngx-navbar>
+<div class="mi-light">
+  <main class="checkout-section">
+    <div class="container">
+      <div class="row checkout-box">
+        <div class="form">
+          <nb-stepper #stepper [(selectedIndex)]="selectedActivityIndex">
+            <nb-step [stepControl]="deliveryDetailsForm" label="Delivery details">
+              <div class="row ml-0 mr-0">
+                <h5 class="number-box">1</h5>
+                <h4 class="title">delivery details</h4>
+              </div>
+              <form [formGroup]="deliveryDetailsForm" (ngSubmit)="onFirstSubmit()" class="step-container">
+                <!-- <div class="label-title">delivery time :</div>
+                <div class="row delivery-time">
+                  <div class="col-sm-6 pr-0 pl-0">
+                    <nb-select selected="17 FEB" fullWidth>
+                      <nb-option value="17 FEB">17 FEB</nb-option>
+                      <nb-option value="18 FEB">18 FEB</nb-option>
+                      <nb-option value="19 FEB">19 FEB</nb-option>
+                      <nb-option value="20 FEB">20 FEB</nb-option>
+                      <nb-option value="21 FEB">21 FEB</nb-option>
+                      <nb-option value="22 FEB">22 FEB</nb-option>
+                      <nb-option value="23 FEB">23 FEB</nb-option>
+                      <nb-option value="24 FEB">24 FEB</nb-option>
+                      <nb-option value="25 FEB">25 FEB</nb-option>
+                    </nb-select>
+                  </div>
+                  <div class="col-sm-6 pr-0 pl-0">
+                    <nb-select selected="12:25" fullWidth>
+                      <nb-option value="12:25">12:25</nb-option>
+                      <nb-option value="13:25">13:25</nb-option>
+                      <nb-option value="14:25">14:25</nb-option>
+                      <nb-option value="15:25">15:25</nb-option>
+                      <nb-option value="16:25">16:25</nb-option>
+                      <nb-option value="17:25">17:25</nb-option>
+                      <nb-option value="18:25">18:25</nb-option>
+                      <nb-option value="19:25">19:25</nb-option>
+                      <nb-option value="20:25">20:25</nb-option>
+                    </nb-select>
+                  </div>
+                </div> -->
+                <!-- <div class="label-title">delivery details :</div> -->
+                <div class="delivery-details">
+                  <div class="row ml-0 mr-0">
+                    <div class="col-sm-6 pl-0">
+                      <div class="form-group">
+                        <label for="">City</label>
+                        <input type="text" nbInput formControlName="city" fullWidth>
+                        <div class="error"
+                          *ngIf="deliveryDetailsForm.get('city').invalid && deliveryDetailsForm.get('city').touched || deliveryDetailsForm.get('street').invalid && isDeliverySubmited">
+                          This filed is required</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 pr-0">
+                      <div class="form-group">
+                        <label for="">State</label>
+                        <input type="text" nbInput formControlName="state" fullWidth>
+                        <div class="error"
+                          *ngIf="deliveryDetailsForm.get('state').invalid && deliveryDetailsForm.get('state').touched || deliveryDetailsForm.get('street').invalid && isDeliverySubmited">
+                          This filed is required</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Street</label>
+                    <input type="text" nbInput formControlName="street" fullWidth>
+                    <div class="error"
+                      *ngIf="deliveryDetailsForm.get('street').invalid && deliveryDetailsForm.get('street').touched || deliveryDetailsForm.get('street').invalid && isDeliverySubmited">
+                      This filed is required</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">House number / building name</label>
+                    <input type="text" nbInput formControlName="house" fullWidth>
+                    <div class="error"
+                      *ngIf="deliveryDetailsForm.get('house').invalid && deliveryDetailsForm.get('house').touched || deliveryDetailsForm.get('house').invalid && isDeliverySubmited">
+                      This filed is required</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" nbInput fullWidth formControlName="floor" placeholder="(Optional) Floor/unit/Room number">
+                  </div>
+                  <div class="form-group">
+                    <textarea rows="3" nbInput fullWidth formControlName="delivery_instruction"
+                      placeholder="(Optional) Do you have any special delivery instruction"></textarea>
+                  </div>
+                </div>
+                <button nbButton status="danger" class="submit-button" nbStepperNext>NEXT</button>
+              </form>
+            </nb-step>
+            <nb-step [stepControl]="personalDetails" label="Personal details">
+              <div class="row ml-0 mr-0">
+                <h5 class="number-box">2</h5>
+                <h4 class="title">personal details</h4>
+              </div>
+              <form [formGroup]="personalDetails" (ngSubmit)="onSecondSubmit()" class="step-container">
+                <div class="personal-details">
+                  <div class="row ml-0 mr-0">
+                    <div class="col-sm-6 pl-0">
+                      <div class="form-group">
+                        <label for="">First name</label>
+                        <input type="text" nbInput formControlName="first_name" fullWidth>
+                        <div class="error"
+                          *ngIf="personalDetails.get('first_name').invalid && personalDetails.get('first_name').touched || personalDetails.get('first_name').invalid && isPersonalDetailsSubmitted">
+                          This filed is required</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 pr-0">
+                      <div class="form-group">
+                        <label for="">Last name</label>
+                        <input type="text" nbInput formControlName="last_name" fullWidth>
+                        <div class="error"
+                          *ngIf="personalDetails.get('last_name').invalid && personalDetails.get('last_name').touched || personalDetails.get('last_name').invalid && isPersonalDetailsSubmitted">
+                          This filed is required</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">email</label>
+                    <input type="text" nbInput formControlName="email" fullWidth>
+                    <div class="error"
+                      *ngIf="personalDetails.get('email').invalid && personalDetails.get('email').touched || personalDetails.get('email').invalid && isPersonalDetailsSubmitted">
+                      This filed is required</div>
+                    <div class="error"
+                      *ngIf="personalDetails.get('email').invalid && personalDetails.get('email').touched || personalDetails.get('email').invalid && isPersonalDetailsSubmitted">
+                      Please use an valid email</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" nbInput formControlName="phone" fullWidth>
+                    <div class="error"
+                      *ngIf="personalDetails.get('phone').invalid && personalDetails.get('phone').touched || personalDetails.get('phone').invalid && isPersonalDetailsSubmitted">
+                      This filed is required</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" nbInput fullWidth formControlName="additional_phone"
+                      placeholder="(Optional) Additional phone number">
+                  </div>
+                </div>
+                <button nbButton status="danger" nbStepperPrevious>prev</button>
+                <button nbButton status="info" class="submit-button float-right" nbStepperNext>next</button>
+              </form>
+            </nb-step>
+
+            <nb-step [stepControl]="false" label="Payment details">
+              <div class="row ml-0 mr-0">
+                <h5 class="number-box">3</h5>
+                <h4 class="title">Payment</h4>
+              </div>
+              <div class="payment-details">
+                <div class="row mr-0 ml-0 header">
+                  <div [class]="{'icon':true,'active':cash_on_delivery}" style="width:49%;margin-right: 2%;" (click)="changePaymentMethod(true)">
+                    <p>
+                      <i class="fas fa-hand-holding-usd"></i>
+                    </p>
+                    <h6>Cash on delivery</h6>
+                  </div>
+                  <div [class]="{'icon':true,'active':!cash_on_delivery}" style="width:49%" (click)="changePaymentMethod(false)">
+                    <p><i class="fas fa-credit-card"></i></p>
+                    <h6>Card payment</h6>
+                  </div>
+                </div>
+                <div class="details" *ngIf="cash_on_delivery">
+                    <h6>Pay by cash on delivery</h6>
+                    <p>Sipmly and easy . pay the bill after you recived your product from delivery boy</p>
+                </div>
+                <div class="details" *ngIf="!cash_on_delivery">
+                    <h6>Pay by credit or debit card</h6>
+                    <p>Please pay using your valid creaditor debit card</p>
+                </div>
+                <div class="square-form" *ngIf="!cash_on_delivery">
+                  <div class="alert alert-danger" role="alert" *ngIf="error_message">
+                    <ul>
+                      <li *ngFor="let message of error_message">{{message}}</li>
+                    </ul>
+                  </div>
+                  <div id="form-container">
+                    <div id="sq-card-number"></div>
+                    <div class="third" id="sq-expiration-date"></div>
+                    <div class="third" id="sq-cvv"></div>
+                    <div class="third" id="sq-postal-code"></div>
+                    <p class="accept">By making this purchase you agree to our <span>Terms and conditions</span></p>
+                    <button nbButton status="danger" class="submit-button w-100" (click)="onGetCardNonce($event)"
+                      nbStepperNext>Finish and pay</button>
+                  </div>
+                </div>
+                <div *ngIf="cash_on_delivery">
+                  <p class="accept">By making this purchase you agree to our <span>Terms and conditions</span></p>
+                  <button nbButton status="danger" class="submit-button w-100" (click)="onGetCardNonce($event)"
+                    nbStepperNext>Finish and pay</button>
+                </div>
+                <p class="agreement">
+                  I agree and i demand that you excute the ordered service before the end of the revcation period. I am
+                  aware after complete my fullfillment i lose my right recission
+                </p>
+              </div>
+            </nb-step>
+            <nb-step [stepControl]="" label="Review informaion">
+              <div class="row ml-0 mr-0">
+                <h5 class="number-box">4</h5>
+                <h4 class="title">Review information</h4>
+              </div>
+              <div class="review-details">
+                <div class="information-box">
+                  <div class="title">
+                    <div class="row mr-0 ml-0">
+                      <div class="text">
+                        <h5>delivery details</h5>
+                      </div>
+                      <div class="icon" (click)="changeSelectedIndex(0)">
+                        <p><i class="fa fa-edit"></i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <p>City : {{ deliveryDetailsForm.value.city }}</p>
+                  <p>State : {{ deliveryDetailsForm.value.state }}</p>
+                  <p>Street : {{ deliveryDetailsForm.value.street }}</p>
+                  <p>House number / Building name : {{ deliveryDetailsForm.value.house }}</p>
+                  <p>Floor / unit / room: {{ deliveryDetailsForm.value.floor }}</p>
+                  <p>Delivery section: {{ deliveryDetailsForm.value.delivery_instruction }}</p>
+                </div>
+                <div class="information-box">
+                  <div class="title">
+                    <div class="row mr-0 ml-0">
+                      <div class="text">
+                        <h5>personal details</h5>
+                      </div>
+                      <div class="icon" (click)="changeSelectedIndex(1)">
+                        <p><i class="fa fa-edit"></i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <p>First name : {{ personalDetails.value.fist_name }}</p>
+                  <p>Last name : {{ personalDetails.value.last_name }}</p>
+                  <p>email : {{ personalDetails.value.email }}</p>
+                  <p>phone number : {{ personalDetails.value.phone }}</p>
+                  <p>additional phone number : {{ personalDetails.value.phone }}</p>
+                </div>
+                <div class="information-box">
+                  <div class="title">
+                    <div class="row mr-0 ml-0">
+                      <div class="text">
+                        <h5>payment details</h5>
+                      </div>
+                      <div class="icon" (click)="changeSelectedIndex(2)">
+                        <p><i class="fa fa-edit"></i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <p>payable amount : {{subtotal}}</p>
+                  <p>pay in : {{cash_on_delivery?'Cash on delivery':'Card' }}</p>
+                </div>
+                <button nbButton status="danger" class="submit-button w-100" (click)="proessOrder()"
+                  nbStepperNext>Confirm Order</button>
+              </div>
+            </nb-step>
+
+            <nb-step [stepControl]="" [hidden]="true" >
+              <div class="row ml-0 mr-0" *ngIf="success">
+                <h5 class="number-box"><i class="fas fa-smile"></i></h5>
+                <h4 class="title" >Order submitted successfully</h4>
+              </div>
+              <div class="row ml-0 mr-0" *ngIf="!success">
+                <h5 class="number-box"><i class="fas fa-sad-tear"></i></h5>
+                <h4 class="title" >Failed to submit order</h4>
+              </div>
+              <div class="welcome-section" *ngIf="success">
+                <h4>Thanks for order</h4>
+                <p>We will sent your orderd items as soon as possible</p>
+
+                <div class="contact-section">
+                  <p>
+                    If you want to change anything in your order please call us
+                  </p>
+                  <h5>Contact Number</h5>
+                  <p>0181985376</p>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 m-auto">
+                     <button nbButton status="danger" class="submit-button w-100" nbStepperNext>Go home</button>
+                  </div>
+                </div>
+              </div>
+              <div class="welcome-section" *ngIf="!success">
+                <h4>Oops !</h4>
+                <p>the must have a reason to failed order . please see below</p>
+
+                <div class="mt-1">
+                    <div class="alert alert-danger" role="alert" *ngIf="final_error_message">
+                      {{final_error_message}}
+                    </div>
+                </div>
+
+                <div class="contact-section">
+                  <p>
+                    if there has no information about failing order plase try again or call us
+                  </p>
+                  <h5>Contact Number</h5>
+                  <p>0181985376</p>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 m-auto">
+                     <button nbButton status="danger" class="submit-button w-100" nbStepperNext>Go home</button>
+                  </div>
+                </div>
+              </div>
+            </nb-step>
+          </nb-stepper>
+        </div>
+        <div class="product">
+          <div class="product-cart-section">
+            <table class="table table-sm table-bordered table-striped">
+              <thead class="thead">
+                <tr>
+                  <th>Product name</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let items of cartItems">
+                  <td>{{items.product_name}}</td>
+                  <td><i class="add-min-qty" (click)="removeQty(items)">-</i> <span class="qty">{{items.quantity}}</span> <i class="add-min-qty" (click)="addQty(items)">+</i></td>
+                  <td>$ {{items.price}}</td>
+                  <td>$ {{items.price * items.quantity}}</td>
+                </tr>
+                <tr class="subtoal">
+                  <td>Subtotal</td>
+                  <td>{{ totalQuantity }}</td>
+                  <td></td>
+                  <td>$ {{ subtotal }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<ngx-latest></ngx-latest>
+<ngx-footer-part></ngx-footer-part>
+<nb-layout style="display: none"></nb-layout>

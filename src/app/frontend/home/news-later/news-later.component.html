@@ -1,0 +1,46 @@
+<ngx-navbar></ngx-navbar>
+<main [class]="{'mi-black-newslater':!light_theme, 'mi-white-newslater':light_theme}">
+  <section class="news-later-section">
+  <div class="container" *ngIf="data">
+    <hr class="title-border">
+    <h2 class="title">{{ data.header }}</h2>
+    <div class="details">
+      <p>
+        {{ data.short_description }}
+      </p>
+      <p>
+        <strong>{{ data.description }}</strong>
+      </p>
+      <h3>
+        {{ data.title }}
+      </h3>
+
+      <div class="row" *ngIf="success_message">
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 100%;margin-bottom: 0rem;">
+          {{success_message}}
+        </div>
+      </div>
+      <div class="row" *ngIf="error_message">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert"
+          style="width: 100%;margin-bottom: 0rem;">
+          {{error_message}}
+        </div>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="store()">
+        <div class="row register-section">
+          <div class="col-sm-8">
+            <input type="text" status="success" fieldSize="giant" formControlName="email" nbInput fullWidth placeholder="username@example.com">
+          </div>
+          <div class="col-sm-4 pl-0">
+            <button nbButton fullWidth  status="danger" class="register">REGISTER</button>
+          </div>
+        </div>
+      </form>
+      <div class="terms-and-condition">
+        <nb-checkbox><span class="privacy-text">{{ data.privacy_policy }}</span></nb-checkbox>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<ngx-footer-part></ngx-footer-part>

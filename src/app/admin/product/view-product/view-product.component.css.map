@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEI,KAFC,CACH,EAAE,CACA,EAAE,CAAA;EACA,cAAc,EAAE,SAAS;CAC1B;;AAJL,AAME,KANG,CAMH,MAAM,CAAA;EACJ,KAAK,EAAE,GAAG;CACX",
+    "sources": [
+        "view-product.component.scss"
+    ],
+    "names": [],
+    "file": "view-product.component.css"
+}

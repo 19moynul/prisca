@@ -1,0 +1,187 @@
+<nb-card status="info">
+  <nb-card-header>
+     VIEW ORDER : {{data.order_number}}
+  </nb-card-header>
+  <nb-card-body *ngIf="data">
+    <div class="row">
+      <div class="col-sm-6 pl-0 ">
+        <table class="table table-bordered table-striped">
+          <thead class="thead">
+            <tr>
+              <th class="w-40">name</th>
+              <th class="w-60">description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>First name</th>
+              <td>{{ data.first_name }}</td>
+            </tr>
+            <tr>
+              <th>Last name</th>
+              <td>{{ data.last_name }}</td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>{{ data.email }}</td>
+            </tr>
+            <tr>
+              <th>PHONE</th>
+              <td>{{ data.phone }}</td>
+            </tr>
+            <tr>
+              <th>addtional phone</th>
+              <td>{{ data.additinal_phone }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered table-striped">
+          <tbody>
+            <tr>
+              <th class="w-40">PAYMENT TYPE</th>
+              <td class="w-60">
+                <span *ngIf="data.payment_type == 1">CASH ON  DELIVERY</span>
+                <span *ngIf="data.payment_type == 2">CARD</span>
+              </td>
+            </tr>
+            <tr>
+              <th class="w-40">PAYABLE AMOUNT</th>
+              <td class="w-60">
+                {{totalPrice}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-6 pr-0">
+        <table class="table table-bordered table-striped">
+          <thead class="thead">
+            <tr>
+              <th class="w-40">name</th>
+              <th class="w-60">description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>City</th>
+              <td>{{ data.city }}</td>
+            </tr>
+            <tr>
+              <th>State</th>
+              <td>{{ data.state }}</td>
+            </tr>
+            <tr>
+              <th>Street</th>
+              <td>{{ data.street }}</td>
+            </tr>
+            <tr>
+              <th>House number / Bulding name</th>
+              <td>{{ data.house }}</td>
+            </tr>
+            <tr>
+              <th>Floor/Unit/Room number</th>
+              <td>{{ data.floor }}</td>
+            </tr>
+            <tr>
+              <th>Delivery instruction</th>
+              <td>{{ data.delivery_instruction }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+       <table class="table table-bordered table-striped">
+         <thead class="thead">
+           <tr>
+             <th style="width: 125px;">Image</th>
+             <th>Product name</th>
+             <th>quantity</th>
+             <th>price</th>
+             <th>total</th>
+           </tr>
+         </thead>
+         <tbody *ngIf="items">
+           <tr *ngFor="let item of items">
+             <td>
+               <img [src]="imagePath+item.image" alt="">
+             </td>
+             <td>
+               {{item.product_name}}
+             </td>
+             <td>
+               {{item.quantity}}
+             </td>
+             <td>
+               {{item.price}}
+             </td>
+             <td>
+               {{item.price*item.quantity}}
+             </td>
+           </tr>
+         </tbody>
+         <tfoot class="thead">
+           <td></td>
+           <td><strong>SUBTOTAL</strong></td>
+           <td><strong>{{totalQty}}</strong></td>
+           <td></td>
+           <td><strong>$</strong> {{totalPrice}}</td>
+         </tfoot>
+        </table>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 pl-0">
+         <table class="table table-bordered table-striped">
+           <thead class="thead">
+            <tr>
+              <th>ORDER STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <nb-select placeholder="CHANGE STATUS" fullWidth (selectedChange)="changeStatus($event)">
+                  <nb-option value="0">CANCEL</nb-option>
+                  <nb-option value="1">IN PROGRESS</nb-option>
+                  <nb-option value="2">DELIVERED</nb-option>
+                </nb-select>
+                <div class="status">
+                  <p class="mb-0">
+                    <span *ngIf="data.status=='1'">IN PROGRESS</span>
+                    <span *ngIf="data.status=='2'">DELIVERED</span>
+                    <span *ngIf="data.status=='0'">CANCELED</span>
+                  </p>
+                  <p *ngIf="data.updated_at !== null" class="mb-0">{{data.updated_at}}</p>
+                  <p *ngIf="data.updated_at == null" class="mb-0"> <strong>{{data.created_at}}</strong> </p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <thead>
+
+          </thead>
+        </table>
+      </div>
+      <div class="col-sm-6 pr-0">
+          <table class="table table-bordered table-striped">
+            <thead class="thead">
+              <tr>
+                <th>ORDER HISTORY</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Created at</th>
+                <td>{{data.created_at}}</td>
+              </tr>
+              <tr>
+                <th>Update at</th>
+                <td>{{ data.updated_at }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ngx-admin Demo Application</title>
+
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="../main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpVhQiwAllg1RAFaxMWSpQruuGARy0Y1k&libraries=places"></script>
+  <script type="text/javascript" src="https://js.squareupsandbox.com/v2/paymentform"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</script>
+  <style>
+  .nb-theme-default nb-card-header {
+  font-size: 18px !important;
+  text-transform: uppercase;
+}
+   .news-later-section label span{
+      text-align: justify;
+      margin-left: 16px;
+      font-family: raleway !important;
+      font-weight: 500 !important;
+    }
+    .checkout-box .form .header{
+      padding: 8px 36px;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+    nb-layout-column{
+      padding: 10px;
+    }
+    .error{
+    color: white;
+    background-color: #ff3d77;
+    text-transform: uppercase;
+    padding: 4px;
+    border-left: 4px solid blue;
+    font-size: small;
+    padding-left: 11px;
+    }
+    .nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column {
+    padding: 10px !important;
+    }
+    .nb-theme-default nb-tabset nb-tab {
+    padding: 10px 10px !important;
+    }
+
+    thead{
+    background-color: #5C0606;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    border-color: #5C0606;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+    background-color:#F7F7F7 !important;
+    }
+
+    tbody tr .mi-action-button{
+    text-align: center;
+    }
+
+    tbody tr{
+    text-align: left;
+    }
+
+    /* tbody tr td:first-child{
+    font-weight: 600;
+    text-align: center;
+    background-color: #5C0606;
+    color: white;
+    } */
+
+    .w-5{
+    width: 5%;
+    }
+    .w-10{
+    width: 10%;
+    }
+    .w-15{
+    width: 15%;
+    }
+    .w-20{
+    width: 20%;
+    }
+    .w-25{
+    width: 25%;
+    }
+    .w-30{
+    width: 30%;
+    }
+    .w-35{
+    width: 35%;
+    }
+    .w-40{
+    width: 40%;
+    }
+    .w-45{
+    width: 45%;
+    }
+    .w-50{
+    width: 50%;
+    }
+    .w-55{
+    width: 55%;
+    }
+    .w-60{
+    width: 60%;
+    }
+    .w-65{
+    width: 65%;
+    }
+    .w-70{
+    width: 70%;
+    }
+    .w-75{
+    width: 75%;
+    }
+    .w-80{
+    width: 80%;
+    }
+    .w-85{
+    width: 85%;
+    }
+    .w-90{
+    width: 90%;
+    }
+    .w-95{
+    width: 95%;
+    }
+    .w-100{
+    width: 100%;
+    }
+
+    .p-sm{
+    padding: 10px 5px !important;
+    }
+
+    .mi-action-button .btn{
+    line-height: 0px !important;
+    }
+    .mi-action-button button{
+    border-radius: 6px;
+    padding: 8px 8px;
+    color: white;
+    outline: none;
+    transition: .2s;
+    box-shadow: -2px -2px 4px #f5f5f5, 1.2px 1.2px 5px 0 #333;
+    }
+
+    .mi-action-button button i{
+    /* margin-right: -7px; */
+    }
+
+    .mi-action-button .view{
+    background-color: #0095ff;
+    border-color: #0095ff;
+    padding: 8px 8px;
+    margin-right: 5px;
+    }
+    .mi-action-button .edit{
+    background-color: #ffaa00;
+    border-color: #ffaa00;
+    margin-right: 5px;
+    }
+
+    .mi-action-button .delete{
+    background-color: #ff3d71;
+    border-color: #ff3d71;
+    padding: 8px 8px;
+    }
+    .mi-action-button .cancel{
+    background-color: #ff3d71;
+    border-color: #ff3d71;
+    padding: 8px 10px;
+    margin-right: 11px;
+
+    /* // padding: 5px 7px !important; */
+    }
+    /* .mi-action-button .cancel i{
+    margin-right: -4px !important;
+    margin-left: 4px !important;
+
+    } */
+    .mi-action-button .update{
+    background-color: #3366ff;
+    border-color: #3366ff;
+    margin-right: 5px;
+    /* // padding: 4px 10px !important; */
+
+    }
+    /* .mi-action-button .cancel{
+    background-color: #ffaa00;
+    border-color: #ffaa00;
+    padding: 7px 10px;
+
+    } */
+
+    .mi-action-button button:hover{
+    /* transform: rotateY(180deg); */
+    }
+
+    .mi-action-button .view:hover{
+    color: #0095ff;
+    background-color: #bfc8e2;
+    transition: .2s;
+    border-color: #bfc8e2;
+    }
+    .mi-action-button .edit:hover{
+    color: #ffaa00;
+    background-color: #bfc8e2;
+    transition: .2s;
+    border-color: #bfc8e2;
+    }
+    .mi-action-button .delete:hover{
+    color: #ff3d71;
+    background-color: #bfc8e2;
+    transition: .2s;
+    border-color: #bfc8e2;
+    }
+    .mi-action-button .cancel:hover{
+    color: #ff3d71;
+    background-color: #bfc8e2;
+    transition: .2s;
+    border-color: #bfc8e2;
+    }
+    .mi-action-button .update:hover{
+    color: #3366ff;
+    background-color: #bfc8e2;
+    transition: .2s;
+    border-color: #bfc8e2;
+    }
+
+    .thead {
+    text-transform: uppercase;
+    color: white;
+    background-color: #67005C;
+    }
+
+    .tid {
+    width: 5%;
+    color: white;
+    background-color: #04093E;
+    font-weight: 600;
+    }
+
+
+
+    .error{
+    color: white;
+    background-color: #ff3d77;
+    text-transform: uppercase;
+    padding: 4px;
+    border-left: 4px solid blue;
+    font-size: small;
+    padding-left: 11px;
+    }
+    .icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border:1px solid #E8E8E8;
+    background: linear-gradient(83deg, rgba(7,6,108,0.30062447342218135) 100%, rgba(255,255,255,0.2361987031140581)
+    100%);
+    margin-left: -34px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+
+    }
+
+    .icon-bar span {
+    display: block;
+    text-align: center;
+    padding: 10px 5px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #E8E8E8;
+    }
+
+    .icon-bar span:hover{
+    background-color: #90074f;
+    }
+    .icon-bar:hover{
+    background: #071A5D;
+    color: white !important;
+    font-size: 18px !important;
+    transition: .2s;
+    }
+    .icon-bar:hover span{
+    padding:10px 10px !important;
+    }
+    .icon-bar span:last-child{
+    border-bottom: 0px solid !important;
+    }
+
+    .icon-bar a:hover {
+    background-color: #fff;
+    }
+
+    .mi-code-genarator-background{
+    background-color: #202022;
+    margin-left: -10px !important;
+    color: wheat;
+    padding: 36px 26px;
+    font-size: 20px;
+    line-height: 32px;
+    font-family: monospace;
+    }
+    .mi-code-genarator-header{
+    background: #670D0D;
+    color: white;
+    margin-left: -10px !important;
+    padding-left: 24px;
+    text-transform: uppercase;
+    padding: 14px;
+    font-size: 19px;
+    }
+    label{
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      font-family: raleway;
+      margin-bottom: 1px !important;
+      color: #555;
+    }
+    /*
+    Copyright 2019 Square Inc.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    */
+
+    * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+    .square-payment {
+    margin-top: 10px;
+    }
+
+    body, html {
+    background-color: #F7F8F9;
+    color: #373F4A;
+    font-family: raleway;
+    font-weight: normal;
+    height: 100%;
+    }
+
+    button {
+    border: 0;
+    font-weight: 500;
+    }
+
+    fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    }
+
+    #form-container {
+    position: relative;
+    width: 461px;
+    margin-top: 12px;
+    display: flow-root;
+    /* margin: 0 auto; */
+    /* top: 50%; */
+    /* /* transform: translateY(-50%); */
+    }
+
+    .third {
+    float: left;
+    width: calc((100% - 32px) / 3);
+    padding: 0;
+    margin: 0 16px 16px 0;
+    }
+
+    .third:last-of-type {
+    margin-right: 0;
+    }
+
+    /* Define how SqPaymentForm iframes should look */
+
+    .sq-input {
+    height: 56px;
+    box-sizing: border-box;
+    border: 1px solid #E0E2E3;
+    background-color: white;
+    border-radius: 6px;
+    display: inline-block;
+    -webkit-transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    -ms-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+    }
+
+    /* Define how SqPaymentForm iframes should look when they have focus */
+
+    .sq-input--focus {
+    border: 1px solid #4A90E2;
+    }
+
+    /* Define how SqPaymentForm iframes should look when they contain invalid values */
+
+    .sq-input--error {
+    border: 1px solid #E02F2F;
+    }
+
+    #sq-card-number {
+    margin-bottom: 16px;
+    }
+
+    /* Customize the "Pay with Credit Card" button */
+
+    .button-credit-card {
+    width: 100%;
+    height: 56px;
+    margin-top: 10px;
+    background: #4A90E2;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: center;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+    }
+
+    .button-credit-card:hover {
+     background-color: #4281CB;
+    }
+    .info-container{
+    text-transform: uppercase !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ar',
+        includedLanguages: 'af,ar,de,en,es,fr,hu,it,ja,no,ro,ru,tr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  <ngx-app>Loading...</ngx-app>
+
+  <style>@-webkit-keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@-moz-keyframes spin{0%{-moz-transform:rotate(0)}100%{-moz-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.spinner{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1003;background: #000000;overflow:hidden}  .spinner div:first-child{display:block;position:relative;left:50%;top:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;box-shadow:0 3px 3px 0 rgba(255,56,106,1);transform:translate3d(0,0,0);animation:spin 2s linear infinite}  .spinner div:first-child:after,.spinner div:first-child:before{content:'';position:absolute;border-radius:50%}  .spinner div:first-child:before{top:5px;left:5px;right:5px;bottom:5px;box-shadow:0 3px 3px 0 rgb(255, 228, 32);-webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite}  .spinner div:first-child:after{top:15px;left:15px;right:15px;bottom:15px;box-shadow:0 3px 3px 0 rgba(61, 175, 255,1);animation:spin 1.5s linear infinite}</style>
+  <div id="nb-global-spinner" class="spinner">
+    <div class="blob blob-0"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="blob blob-5"></div>
+  </div>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.container .title {
+  width: 60%;
+  margin: -41px auto 40px auto;
+  background: white;
+  text-align: center;
+}
+
+.mi-featured-section {
+  margin: 50px;
+}
+
+.mi-featured-section .uk-child-width-1-2\@s > * {
+  width: 33.3%;
+}
+
+.mi-featured-section .uk-card-media-top img {
+  width: 100%;
+}
+
+.mi-featured-section .uk-card-body {
+  padding: 10px 16px;
+}
+
+.mi-featured-section .uk-card-body .uk-card-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: raleway;
+  margin-bottom: 0px !important;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+.mi-featured-section .uk-card-body .short-info {
+  margin: -3px 0px 0px 0px;
+  color: #555;
+  font-size: 12px;
+  font-family: raleway;
+  font-weight: 500;
+}
+
+.mi-featured-section .uk-card-body .row {
+  margin-top: 7px;
+  margin-bottom: 4px;
+}
+
+.mi-featured-section .uk-card-body .row .discount {
+  width: 32%;
+  text-align: center;
+  margin-right: 1.3%;
+}
+
+.mi-featured-section .uk-card-body .row .discount p {
+  color: #ff1274 !important;
+  font-weight: 600;
+}
+
+.mi-featured-section .uk-card-body .row .regular-price {
+  width: 32%;
+  text-align: center;
+  margin-right: 1.3%;
+}
+
+.mi-featured-section .uk-card-body .row .regular-price p {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.mi-featured-section .uk-card-body .row .final-price {
+  width: 32%;
+  text-align: center;
+  margin-right: 1.3%;
+  font-weight: 600;
+}
+
+.mi-featured-section .uk-card-body .row .final-price p {
+  color: #000;
+  font-weight: 600;
+}
+
+.mi-featured-section .uk-card-body .row p {
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+.mi-featured-section .mi-card-footer .b-button {
+  width: 100%;
+  border-radius: 0px;
+  padding: 10px;
+}
+
+.mi-featured-section .mi-sm-box {
+  text-align: center;
+  background: #f7f7f7;
+  height: 360px;
+  cursor: pointer;
+}
+
+.mi-featured-section .mi-sm-box h1 i {
+  font-size: 130px;
+  color: #ccc;
+  margin-bottom: 0px;
+  margin-top: 87px;
+}
+
+.mi-featured-section .mi-sm-box h4 {
+  margin: 0;
+  color: #ccc;
+}
+/*# sourceMappingURL=category-product.component.css.map */

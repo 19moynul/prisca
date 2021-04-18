@@ -1,0 +1,137 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    Table header will go here
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <table class="table table-bordered table-striped table-responsive">
+      <thead class="thead">
+        <tr>
+          <th class="tid">id</th>
+          <th class="w-15" style="white-space: nowrap;">main image</th>
+          <th class="w-20">product name</th>
+          <th class="w-8">price</th>
+          <th class="w-8">regular price</th>
+          <th class="w-8">offer price</th>
+          <th class="w-8">subscriber price</th>
+          <th class="w-8">quantity</th>
+          <!-- <th class="w-">description</th> -->
+          <!-- <th class="w-">short description</th> -->
+          <!-- <th class="w-">details image</th> -->
+          <!-- <th class="w-">ingrediants</th> -->
+          <!-- <th class="w-">description</th> -->
+          <th class="w-15">Action</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr>
+          <!--search section-->
+          <td>
+            <form [formGroup]="searchForm">
+              <nb-select fullWidth placeholder="SORT" formControlName="sort">
+                <nb-option value="ASC">ASC</nb-option>
+                <nb-option value="DESC">DESC</nb-option>
+              </nb-select>
+            </form>
+          </td>
+          <td> </td>
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" class="" name="product_name"
+                placeholder="Search ...." formControlName="product_name" autofocus="true" [nbAutocomplete]="product_name"
+                autocomplete="off"  style="width:320px"/>
+              <nb-autocomplete fullWidth #product_name>
+                <nb-option *ngFor="let data of all_product_name " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" style="width: 90px;" name="price" placeholder="Search ...."
+                formControlName="price" [nbAutocomplete]="price" autocomplete="off" />
+              <nb-autocomplete fullWidth #price>
+                <nb-option *ngFor="let data of all_price " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" name="regular_price" style="width:150px"
+                placeholder="Search ...." formControlName="regular_price" [nbAutocomplete]="regular_price"
+                autocomplete="off" />
+              <nb-autocomplete fullWidth #regular_price>
+                <nb-option *ngFor="let data of all_regular_price " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" name="offer_price" style="width:150px"
+                placeholder="Search ...." formControlName="offer_price" [nbAutocomplete]="offer_price"
+                autocomplete="off" />
+              <nb-autocomplete fullWidth #offer_price>
+                <nb-option *ngFor="let data of all_offer_price " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" name="subscriber_price" style="width:150px"
+                placeholder="Search ...." formControlName="subscriber_price" autofocus="false" [nbAutocomplete]="subscriber_price"
+                autocomplete="off" />
+              <nb-autocomplete fullWidth #subscriber_price>
+                <nb-option *ngFor="let data of all_subscriber_price " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+          <td></td>
+          <td>
+            <button nbButton status="info" style="width:125px" (click)="triggerSearch()"> <span
+                *ngIf="!search_on_process">SEARCH</span><span *ngIf="search_on_process"><i
+                  class="fa fa-cog fa-spin"></i></span> </button>
+          </td>
+        </tr>
+        <tr *ngFor="let item of data;let i=index">
+          <td>{{ i+1 }}</td>
+          <td> <img [src]="imagePath+item.main_image" alt="no image"> </td>
+          <td> {{ item.product_name }} </td>
+          <td> {{ item.price }} </td>
+          <td> {{ item.regular_price }} </td>
+          <td> {{ item.offer_price }} </td>
+          <td> {{ item.subscriber_price }} </td>
+          <td> {{ item.quantity }} </td>
+          <!-- <td> <img [src]="imagePath+item.details_image" alt="no image"> </td> -->
+          <!-- <td> {{ item.ingrediants }} </td> -->
+          <!-- <td> {{ item.short_description }} </td> -->
+          <td class="mi-action-button">
+            <button (click)="viewMore(item.id)" nbPopover="VIEW MORE" nbPopoverTrigger="hover"
+              nbPopoverPlacement="bottom" class="view"><i class="fa fa-eye"></i></button>
+            <button (click)="edit(item.id)" nbPopover="EDIT" nbPopoverTrigger="hover" nbPopoverPlacement="bottom"
+              class="edit"><i class="fa fa-edit"></i></button>
+            <button (click)="delete(item.id)" nbPopover="DELETE" nbPopoverTrigger="hover" nbPopoverPlacement="bottom"
+              class="delete"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+
+</nb-card>
+<!--end of nb-fc-card-->

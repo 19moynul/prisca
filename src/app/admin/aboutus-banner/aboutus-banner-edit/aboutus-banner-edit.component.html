@@ -1,0 +1,49 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    update Aboutus banner
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <form [formGroup]="createForm" (ngSubmit)="create()">
+      <div class="form-group">
+        <div class="row">
+          <div class="mi-selected-image-box" *ngIf="live_image_url || uploaded_image">
+            <img [src]="live_image_url?live_image_url:imagePath+uploaded_image" class="mi-selected-image" alt="">
+            <i class="fas fa-times" (click)="cance()" *ngIf="live_image_url"></i>
+          </div>
+          <input type="file" nbInput fullWidth #image (change)="imageUpload($event);" style="display: none;">
+          <div
+            [class]="{'upload-image-button':!live_image_url || !uploaded_image,'upload-image-button-with-image':live_image_url || uploaded_image}">
+            <button nbButton status="danger" (click)="image.click();$event.preventDefault()">Upload
+              image</button>
+          </div>
+          <div class="error"
+            *ngIf="createForm.get('image').invalid && createForm.get('image').touched || createForm.get('image').invalid && isSubmited==true">
+            This file is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" nbInput fullWidth placeholder="title" formControlName="title">
+        <div class="error"
+          *ngIf="createForm.get('title').invalid && createForm.get('title').touched || createForm.get('title').invalid && isSubmited==true">
+          This file is required</div>
+      </div>
+      <div class="form-group">
+        <textarea rows="5" nbInput fullWidth placeholder="text" formControlName="text"></textarea>
+        <div class="error"
+          *ngIf="createForm.get('text').invalid && createForm.get('text').touched || createForm.get('text').invalid && isSubmited==true">
+          This file is required</div>
+      </div>
+
+       <div class="col-sm-3 m-auto">
+         <button nbButton status="warning" class="w-100"> <span *ngIf="!create_on_process">update</span><span
+             *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+       </div>
+    </form>
+  </nb-card-body>
+  <!--end of nb card body-->
+</nb-card>
+<!--end of nb-fc-card-->

@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+      <img src="assets/images/logo.png" class="logo" alt="">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+        <li class="nav-item dropdown" id="main-drop">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            PAGE
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="dropdown-menu">
+            <li><a class="dropdown-item" (click)="navigateTopage('/')">Home</a></li>
+            <li><a class="dropdown-item" (click)="navigateTopage('/brand-story')">BRAND STORY</a></li>
+            <li><a class="dropdown-item" (click)="navigateTopage('/product')">Product</a></li>
+            <li><a class="dropdown-item" (click)="navigateTopage('/contact')">CONTACT</a></li>
+            <li><a class="dropdown-item" (click)="navigateTopage('/our-authorigation/sympathisants')">Sympathisants</a>
+            </li>
+            <li><a class="dropdown-item" (click)="navigateTopage('/our-authorigation/informations_légale')">Informations légale</a></li>
+            <li><a class="dropdown-item" (click)="navigateTopage('/our-authorigation/madagascar')">Madagascar</a></li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="navigateTopage('/')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateTopage('/brand-story')">BRAND STORY</a>
+        </li> -->
+        <!-- <li class="nav-item dropdown" id="product-dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            PRODUCT
+          </a>
+          <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="dropdown-item" (click)="navigateTopage('/all/product')">All products</li>
+            <li class="dropdown-item" (click)="navigateTopage('/category')">All categories</li>
+            <li class="dropdown-item" (click)="navigateTopage('/all/product/discount')">Discounted product</li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" tabindex="-1" aria-disabled="true" (click)="navigateTopage('/product')">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" tabindex="-1" aria-disabled="true" (click)="navigateTopage('/contact')">CONTACT</a>
+        </li> -->
+        <li class="nav-item" *ngIf="!logout">
+          <a class="nav-link"  tabindex="-1" aria-disabled="true">
+            <span class="login" (click)="navigateTopage('/news-later')">News letter</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  tabindex="-1" aria-disabled="true">
+            <span class="login" *ngIf="!logout" (click)="navigateTopage('/login')">LOGIN</span>
+            <span class="login" *ngIf="logout" (click)="logOut()">LOGOUT</span>
+          </a>
+        </li>
+         <li class="nav-item dropdown" id="main-drop">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="assets/images/french.png" alt="" style="width: 32px;">
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="dropdown-menu">
+             <li class="dropdown-item" *ngFor="let lang of language"><img [src]="lang.image" alt="" style="width: 32px;padding-right: 10px;"> {{lang.name}}</li>
+           </ul>
+          </li>
+          <div id="google_translate_element"></div>
+        <li class="nav-item">
+          <span class="nav-link border-top-to-bottom"></span>
+        </li>
+        <li class="nav-item" (click)="navigateTopage('/cart')" style="cursor: pointer;">
+          <a class="nav-link disabled"  tabindex="-1" aria-disabled="true">
+            <span class="cart"><i class="fas fa-shopping-cart"></i></span>
+            <span class="number">{{itemLength}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link border-top-to-bottom" style="margin-left: -7px;"></span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link search" (click)="openWithBackdropClick()"> <i class="fas fa-search"
+              style="margin-right: 6px;"></i> SEARCH</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="margin"></div>
+
+<div class="sticky-bar mi-dark-bar">
+  <div class="row mr-0 ml-0">
+    <div class="body">
+    <label class="light">LIGHT</label>
+  <label class="switch">
+    <input type="checkbox" [checked]="!light_theme" (change)="setTheme($event)">
+    <span class="slider round"></span>
+  </label>
+  <label class="dark">DARK</label>
+  </div>
+
+  <div class="rightbutton"></div>
+  </div>
+</div>
+<nb-layout style="display: none"></nb-layout>

@@ -1,0 +1,65 @@
+
+<div class="search-section">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</div>
+
+<table>
+ <tbody>
+    <tr>
+      <td class="w-5">
+        <form [formGroup]="searchForm">
+          <nb-select fullWidth placeholder="SORT">
+            <nb-option value="ASC">ASC</nb-option>
+            <nb-option value="DESC">DESC</nb-option>
+          </nb-select>
+        </form>
+      </td>
+      <td class="w-25">
+        <form [formGroup]="searchForm">
+          <input #autoInput nbInput type="text" (input)="search($event)" name="title" placeholder="Search ...."
+            [nbAutocomplete]="branch_name" autocomplete="off" />
+          <nb-autocomplete fullWidth #branch_name>
+            <nb-option *ngFor="let data of all_title " value="{{ data.value }}">
+              {{ data.text }}
+            </nb-option>
+          </nb-autocomplete>
+        </form>
+      </td>
+      <td class="w-25">
+        <form [formGroup]="searchForm">
+          <input #autoInput nbInput type="text" (input)="search($event)" name="subtitle" placeholder="Search ...."
+            [nbAutocomplete]="branch_name" autocomplete="off" />
+          <nb-autocomplete fullWidth #branch_name>
+            <nb-option *ngFor="let data of all_subtitle " value="{{ data.value }}">
+              {{ data.text }}
+            </nb-option>
+          </nb-autocomplete>
+        </form>
+      </td>
+      <td class="w-15"> </td>
+      <td class="w-15">
+        <form [formGroup]="searchForm">
+          <input #autoInput nbInput type="text" (input)="search($event)" name="url" placeholder="Search ...."
+            [nbAutocomplete]="branch_name" autocomplete="off" />
+          <nb-autocomplete fullWidth #branch_name>
+            <nb-option *ngFor="let data of all_url " value="{{ data.value }}">
+              {{ data.text }}
+            </nb-option>
+          </nb-autocomplete>
+        </form>
+      </td>
+      <td class="w-15">
+        <button nbButton status="info" class="w-100" (click)="triggerSearch"> <span
+            *ngIf="!search_on_process">Create</span><span *ngIf="search_on_process"><i
+              class="fa fa-cog fa-spin"></i></span>
+        </button>
+      </td>
+    </tr>
+ </tbody>
+</table>
+

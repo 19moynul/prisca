@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-sm-6 m-auto">
+    <nb-card status="success">
+      <!--start of mi-fc-card-->
+      <nb-card-header>
+        <!--nb card header started-->
+        Table header will go here
+      </nb-card-header>
+      <!--end of nb card header-->
+      <nb-card-body>
+        <!--nb card body started-->
+        <form [formGroup]="createForm" (ngSubmit)="create()">
+          <div class="form-group">
+            <label>first name</label>
+            <input type="text" nbInput fullWidth placeholder="first name" formControlName="first_name">
+            <div class="error"
+              *ngIf="createForm.get('first_name').invalid && createForm.get('first_name').touched || createForm.get('first_name').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+          <div class="form-group">
+            <label>last name</label>
+            <input type="text" nbInput fullWidth placeholder="last name" formControlName="last_name">
+            <div class="error"
+              *ngIf="createForm.get('last_name').invalid && createForm.get('last_name').touched || createForm.get('last_name').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+          <div class="form-group">
+            <label>email</label>
+            <input type="text" nbInput fullWidth placeholder="email" formControlName="email">
+            <div class="error"
+              *ngIf="createForm.get('email').invalid && createForm.get('email').touched || createForm.get('email').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+          <div class="form-group">
+            <label>password</label>
+            <input type="text" nbInput fullWidth placeholder="password" formControlName="password">
+            <div class="error"
+              *ngIf="createForm.get('password').invalid && createForm.get('password').touched || createForm.get('password').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+          <div class="form-group">
+            <label>confirm password</label>
+            <input type="text" nbInput fullWidth placeholder="password_confirmation" formControlName="password_confirmation">
+            <div class="error"
+              *ngIf="createForm.get('password_confirmation').invalid && createForm.get('password_confirmation').touched || createForm.get('password_confirmation').invalid && isSubmited==true">
+              This filed is required</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 m-auto">
+              <button nbButton status="info" class="w-100"> <span *ngIf="!create_on_process">Create</span><span
+                  *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+      <!--end of nb card body-->
+    </nb-card>
+    <!--end of nb-fc-card-->
+
+  </div>
+</div>

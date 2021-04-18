@@ -1,0 +1,47 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    MANAGE NEWS LETTER
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <form [formGroup]="editForm" (ngSubmit)="update()">
+       <div class="form-group">
+         <label>header</label>
+         <input type="text" nbInput fullWidth placeholder="header" formControlName="header">
+       </div>
+      <div class="form-group">
+        <label>short description</label>
+        <textarea rows="2" nbInput fullWidth placeholder="short description"
+          formControlName="short_description"></textarea>
+      </div>
+      <div class="form-group">
+        <label>description</label>
+        <textarea rows="2" nbInput fullWidth placeholder="description" formControlName="description"></textarea>
+        <div class="error"
+          *ngIf="editForm.get('description').invalid && editForm.get('description').touched || editForm.get('description').invalid && isSubmited==true">
+          This filed is required</div>
+      </div>
+
+      <div class="form-group">
+        <label>title</label>
+        <input type="text" nbInput fullWidth placeholder="title" formControlName="title">
+      </div>
+
+      <div class="form-group">
+        <label>Privacy policy (shortly)</label>
+        <textarea rows="2" nbInput fullWidth placeholder="privacy policy" formControlName="privacy_policy"></textarea>
+      </div>
+      <div class="row">
+          <div class="col-sm-2 m-auto">
+            <button nbButton status="warning" class="w-100"> <span *ngIf="!create_on_process">Update</span><span
+                *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+          </div>
+      </div>
+    </form>
+  </nb-card-body>
+  <!--end of nb card body-->
+</nb-card>
+<!--end of nb-fc-card-->

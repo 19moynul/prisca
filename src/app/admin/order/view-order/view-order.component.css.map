@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAA;EACL,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "view-order.component.scss"
+    ],
+    "names": [],
+    "file": "view-order.component.css"
+}

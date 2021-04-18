@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-sm-6 m-auto">
+    <nb-card status="success">
+      <!--start of mi-fc-card-->
+      <nb-card-header>
+        <!--nb card header started-->
+        Table header will go here
+      </nb-card-header>
+      <!--end of nb card header-->
+      <nb-card-body>
+        <!--nb card body started-->
+        <form [formGroup]="createForm" (ngSubmit)="create()">
+          <div class="form-group">
+            <label>icon</label>
+            <input type="text" nbInput fullWidth placeholder="icon" formControlName="icon">
+            <div class="error"
+              *ngIf="createForm.get('icon').invalid && createForm.get('icon').touched || createForm.get('icon').invalid && isSubmited==true">
+              This file is required</div>
+          </div>
+          <div class="form-group">
+            <label>link</label>
+            <input type="text" nbInput fullWidth placeholder="link" formControlName="link">
+            <div class="error"
+              *ngIf="createForm.get('link').invalid && createForm.get('link').touched || createForm.get('link').invalid && isSubmited==true">
+              This file is required</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 m-auto">
+              <button nbButton status="warning" class="w-100"> <span *ngIf="!create_on_process">Update</span><span
+                  *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+            </div>
+          </div>
+        </form>
+      </nb-card-body>
+      <!--end of nb card body-->
+    </nb-card>
+    <!--end of nb-fc-card-->
+
+  </div>
+</div>

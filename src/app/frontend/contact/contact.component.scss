@@ -1,0 +1,445 @@
+.mi-dark {
+  .banner-section {
+    background: #080824;
+
+    .mi-banner-box {
+      background: #080824;
+      box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+
+      h3 {
+        color: #ffff;
+
+      }
+
+      p {
+        color: #444;
+      }
+    }
+  }
+
+  .contact-form-section {
+    background: #080824;
+
+    .mi-contact-box {
+      background: #080824;
+      box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+
+      .row {
+        .icon {
+          i {
+            color: #fff;
+          }
+        }
+
+        .info-text {
+          p {
+            color: #666;
+
+          }
+        }
+
+        .form {
+          label {
+            color: #888;
+          }
+
+          .form-control {
+            box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+            background-color: #080824;
+            border-color: #080824;
+            color: #888;
+          }
+
+          input{
+            height: 50px;
+
+          }
+
+          button {
+            background: #080824;
+            border-color: #080824;
+            box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+            color: #888;
+            padding: 15px;
+            margin-top: 20px;
+          }
+
+          button:hover {
+            box-shadow: 1px 0px 3px #111, 1px 1px 3px green;
+          }
+
+          h5 {
+            color: #555;
+            -webkit-text-stroke-color: #fff;
+
+          }
+
+          ::placeholder {
+            color: #333 !important;
+          }
+
+          .text {
+            border-left: 5px solid #222;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-card-section {
+    background: #080824;
+
+    .mi-contact-card {
+      background: #080824;
+      box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+
+      .icon {
+        background: #fff;
+        box-shadow: inset 0px -2px 1px -1px #555;
+
+        p {
+          color: #080824;
+        }
+      }
+
+      .details {
+        h5 {
+          color: #888;
+        }
+
+        p {
+          color: #777;
+
+        }
+      }
+    }
+
+    .mi-contact-card:hover>.icon {
+      background: #fff;
+      box-shadow: inset 0px -2px 1px -1px #555;
+
+      p {
+        color: #084fff;
+      }
+    }
+  }
+}
+.mi-light {
+  .banner-section {
+    background: #f5f5f5;
+
+    .mi-banner-box {
+      background: #ededed;
+      box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+
+      h3 {
+        color: #080824;
+        // text-shadow: 0px 2px 2px #000;
+      }
+
+      p {
+        color: #444;
+      }
+    }
+  }
+
+  .contact-form-section {
+    background: #f5f5f5;
+
+    .mi-contact-box {
+      background: #ededed;
+      box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+
+      .row {
+        .icon {
+          i {
+            color: #313eff;
+          }
+        }
+
+        .info-text {
+          p {
+            color: #666;
+
+          }
+        }
+
+        .form {
+          label {
+            color: #333;
+          }
+
+          .form-control {
+            box-shadow: inset 1px 1px 3px #f6f6f6;
+            // box-shadow: -12px -14px 9px #f6f6f6, 3px 3px 9px #999;
+            background-color: #f8f8f8;
+            border-color: #f8f8f8;
+            color: #000;
+
+          }
+
+          button {
+            background: #313eff;
+            border-color: #313eff;
+            box-shadow: 1px 1px 3px #888, 1px 1px 3px #fff;
+            color: #fff;
+          }
+
+          button:hover {
+            box-shadow: 1px 0px 3px #111, 1px 1px 3px green;
+          }
+
+          h5 {
+            color: #020a40;
+            // -webkit-text-stroke-color: red;
+
+          }
+
+          ::placeholder {
+            color: #b9b9b9 !important;
+          }
+
+          .text {
+            border-left: 5px solid #222;
+          }
+        }
+      }
+    }
+
+  }
+
+  .contact-card-section {
+    background: #f5f5f5;
+
+    .mi-contact-card {
+      background: #ededed;
+      box-shadow: -12px -14px 9px #f6f6f6, 3px 3px 9px #999;
+
+      .icon {
+        background: rgba(78,74,200,.1);
+        box-shadow: inset 0px -2px 1px -1px #555;
+
+        p {
+          color: #084fff;
+        }
+      }
+
+      .details {
+        h5 {
+          color: #11002b;
+        }
+
+        p {
+          color: #191919;
+
+        }
+      }
+    }
+
+    .mi-contact-card:hover>
+      .icon {
+      background: #fff;
+      box-shadow: inset 0px -2px 1px -1px #555;
+
+      p {
+        color: #084fff;
+      }
+    }
+  }
+}
+
+
+//black color is done here
+//white color design is starting from here
+
+//white color desing end here
+
+
+// original page desing start from here
+.banner-section {
+  padding: 25px 0px;
+
+  .mi-banner-box {
+    width: 90%;
+    margin: 0px auto;
+    height: 515px;
+    border-radius: 15px;
+
+    .left {
+      width: 50%;
+      padding: 40px;
+
+      img {
+        height: 424px;
+      }
+    }
+
+    .right {
+      width: 50%;
+      padding: 15% 0px;
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 57px;
+        padding-left: 52px;
+      }
+
+      p {
+        font-family: raleway;
+        margin-top: 17px;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 0px 56px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.contact-form-section {
+  padding: 70px 0px;
+
+  .container {
+    width: 93%;
+  }
+
+  .mi-contact-box {
+    border-radius: 20px;
+
+    .row {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 20px;
+
+      .icon {
+        width: 15%;
+        overflow: hidden;
+
+        i {
+          font-size: 45px;
+          margin-top: 8px;
+        }
+      }
+
+      .info-text {
+        width: 85%;
+
+        p {
+          font-family: raleway;
+          font-size: 15px;
+          margin-bottom: 0px !important;
+
+          .cursive {
+            font-family: cursive;
+          }
+        }
+      }
+
+      .form {
+        width: 50%;
+        padding: 30px;
+
+        label {
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .form-control {
+          font-size: 15px;
+          font-family: raleway;
+          padding: 11px 11px !important;
+        }
+
+        input {
+          height: 49px;
+        }
+
+        textarea {}
+
+
+
+        h5 {
+          text-align: center;
+          text-transform: uppercase;
+          -webkit-text-stroke-width: 1px;
+
+          font-size: 26px;
+
+        }
+
+        ::placeholder {
+          font-weight: 600 !important;
+        }
+      }
+
+      .text {
+        width: 50%;
+        padding: 146px 30px;
+      }
+    }
+  }
+
+  .mi-contact-box:hover {
+    transition: .2s;
+  }
+}
+
+.contact-card-section {
+
+  padding-bottom: 50px;
+
+  .mi-contact-card {
+    padding: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    .icon {
+        width: 38%;
+        margin: 0px auto;
+        overflow: hidden;
+        border-radius: 63%;
+        height: 112px;
+
+      p {
+          text-align: center;
+          font-size: 58px;
+          margin-top: 24px;
+      }
+    }
+
+    .details {
+      h5 {
+        text-align: center;
+        margin-top: 17px;
+        font-size: 22px;
+      }
+
+      p {
+        margin-top: 19px;
+        font-family: cursive;
+        text-align: center;
+        font-size: 19px;
+      }
+    }
+  }
+
+  .mi-contact-card:hover>.icon {
+    transition: .2s;
+  }
+}
+
+.light-brake {
+  height: 60px;
+  background: #f5f5f5;
+}
+.dark-brake {
+  height: 60px;
+  background: #080824;
+}
+
+
+label{
+  margin-bottom: 7px !important;
+  margin-left: 3px;
+}

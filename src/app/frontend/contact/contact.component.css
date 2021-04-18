@@ -1,0 +1,448 @@
+.mi-dark .banner-section {
+  background: #080824;
+}
+
+.mi-dark .banner-section .mi-banner-box {
+  background: #080824;
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-dark .banner-section .mi-banner-box h3 {
+  color: #ffff;
+}
+
+.mi-dark .banner-section .mi-banner-box p {
+  color: #444;
+}
+
+.mi-dark .contact-form-section {
+  background: #080824;
+}
+
+.mi-dark .contact-form-section .mi-contact-box {
+  background: #080824;
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .icon i {
+  color: #fff;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .info-text p {
+  color: #666;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form label {
+  color: #888;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form .form-control {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  background-color: #080824;
+  border-color: #080824;
+  color: #888;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form input {
+  height: 50px;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form button {
+  background: #080824;
+  border-color: #080824;
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #888;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form button:hover {
+  -webkit-box-shadow: 1px 0px 3px #111, 1px 1px 3px green;
+          box-shadow: 1px 0px 3px #111, 1px 1px 3px green;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form h5 {
+  color: #555;
+  -webkit-text-stroke-color: #fff;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form ::-webkit-input-placeholder {
+  color: #333 !important;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form :-ms-input-placeholder {
+  color: #333 !important;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form ::-ms-input-placeholder {
+  color: #333 !important;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form ::placeholder {
+  color: #333 !important;
+}
+
+.mi-dark .contact-form-section .mi-contact-box .row .form .text {
+  border-left: 5px solid #222;
+}
+
+.mi-dark .contact-card-section {
+  background: #080824;
+}
+
+.mi-dark .contact-card-section .mi-contact-card {
+  background: #080824;
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-dark .contact-card-section .mi-contact-card .icon {
+  background: #fff;
+  -webkit-box-shadow: inset 0px -2px 1px -1px #555;
+          box-shadow: inset 0px -2px 1px -1px #555;
+}
+
+.mi-dark .contact-card-section .mi-contact-card .icon p {
+  color: #080824;
+}
+
+.mi-dark .contact-card-section .mi-contact-card .details h5 {
+  color: #888;
+}
+
+.mi-dark .contact-card-section .mi-contact-card .details p {
+  color: #777;
+}
+
+.mi-dark .contact-card-section .mi-contact-card:hover > .icon {
+  background: #fff;
+  -webkit-box-shadow: inset 0px -2px 1px -1px #555;
+          box-shadow: inset 0px -2px 1px -1px #555;
+}
+
+.mi-dark .contact-card-section .mi-contact-card:hover > .icon p {
+  color: #084fff;
+}
+
+.mi-light .banner-section {
+  background: #f5f5f5;
+}
+
+.mi-light .banner-section .mi-banner-box {
+  background: #ededed;
+  -webkit-box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+          box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+}
+
+.mi-light .banner-section .mi-banner-box h3 {
+  color: #080824;
+}
+
+.mi-light .banner-section .mi-banner-box p {
+  color: #444;
+}
+
+.mi-light .contact-form-section {
+  background: #f5f5f5;
+}
+
+.mi-light .contact-form-section .mi-contact-box {
+  background: #ededed;
+  -webkit-box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+          box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .icon i {
+  color: #313eff;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .info-text p {
+  color: #666;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form label {
+  color: #333;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form .form-control {
+  -webkit-box-shadow: inset 1px 1px 3px #f6f6f6;
+          box-shadow: inset 1px 1px 3px #f6f6f6;
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+  color: #000;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form button {
+  background: #313eff;
+  border-color: #313eff;
+  -webkit-box-shadow: 1px 1px 3px #888, 1px 1px 3px #fff;
+          box-shadow: 1px 1px 3px #888, 1px 1px 3px #fff;
+  color: #fff;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form button:hover {
+  -webkit-box-shadow: 1px 0px 3px #111, 1px 1px 3px green;
+          box-shadow: 1px 0px 3px #111, 1px 1px 3px green;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form h5 {
+  color: #020a40;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form ::-webkit-input-placeholder {
+  color: #b9b9b9 !important;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form :-ms-input-placeholder {
+  color: #b9b9b9 !important;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form ::-ms-input-placeholder {
+  color: #b9b9b9 !important;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form ::placeholder {
+  color: #b9b9b9 !important;
+}
+
+.mi-light .contact-form-section .mi-contact-box .row .form .text {
+  border-left: 5px solid #222;
+}
+
+.mi-light .contact-card-section {
+  background: #f5f5f5;
+}
+
+.mi-light .contact-card-section .mi-contact-card {
+  background: #ededed;
+  -webkit-box-shadow: -12px -14px 9px #f6f6f6, 3px 3px 9px #999;
+          box-shadow: -12px -14px 9px #f6f6f6, 3px 3px 9px #999;
+}
+
+.mi-light .contact-card-section .mi-contact-card .icon {
+  background: rgba(78, 74, 200, 0.1);
+  -webkit-box-shadow: inset 0px -2px 1px -1px #555;
+          box-shadow: inset 0px -2px 1px -1px #555;
+}
+
+.mi-light .contact-card-section .mi-contact-card .icon p {
+  color: #084fff;
+}
+
+.mi-light .contact-card-section .mi-contact-card .details h5 {
+  color: #11002b;
+}
+
+.mi-light .contact-card-section .mi-contact-card .details p {
+  color: #191919;
+}
+
+.mi-light .contact-card-section .mi-contact-card:hover >
+.icon {
+  background: #fff;
+  -webkit-box-shadow: inset 0px -2px 1px -1px #555;
+          box-shadow: inset 0px -2px 1px -1px #555;
+}
+
+.mi-light .contact-card-section .mi-contact-card:hover >
+.icon p {
+  color: #084fff;
+}
+
+.banner-section {
+  padding: 25px 0px;
+}
+
+.banner-section .mi-banner-box {
+  width: 90%;
+  margin: 0px auto;
+  height: 515px;
+  border-radius: 15px;
+}
+
+.banner-section .mi-banner-box .left {
+  width: 50%;
+  padding: 40px;
+}
+
+.banner-section .mi-banner-box .left img {
+  height: 424px;
+}
+
+.banner-section .mi-banner-box .right {
+  width: 50%;
+  padding: 15% 0px;
+}
+
+.banner-section .mi-banner-box .right h3 {
+  text-transform: uppercase;
+  font-size: 57px;
+  padding-left: 52px;
+}
+
+.banner-section .mi-banner-box .right p {
+  font-family: raleway;
+  margin-top: 17px;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 0px 56px;
+  line-height: 24px;
+}
+
+.contact-form-section {
+  padding: 70px 0px;
+}
+
+.contact-form-section .container {
+  width: 93%;
+}
+
+.contact-form-section .mi-contact-box {
+  border-radius: 20px;
+}
+
+.contact-form-section .mi-contact-box .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+.contact-form-section .mi-contact-box .row .icon {
+  width: 15%;
+  overflow: hidden;
+}
+
+.contact-form-section .mi-contact-box .row .icon i {
+  font-size: 45px;
+  margin-top: 8px;
+}
+
+.contact-form-section .mi-contact-box .row .info-text {
+  width: 85%;
+}
+
+.contact-form-section .mi-contact-box .row .info-text p {
+  font-family: raleway;
+  font-size: 15px;
+  margin-bottom: 0px !important;
+}
+
+.contact-form-section .mi-contact-box .row .info-text p .cursive {
+  font-family: cursive;
+}
+
+.contact-form-section .mi-contact-box .row .form {
+  width: 50%;
+  padding: 30px;
+}
+
+.contact-form-section .mi-contact-box .row .form label {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-form-section .mi-contact-box .row .form .form-control {
+  font-size: 15px;
+  font-family: raleway;
+  padding: 11px 11px !important;
+}
+
+.contact-form-section .mi-contact-box .row .form input {
+  height: 49px;
+}
+
+.contact-form-section .mi-contact-box .row .form h5 {
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  font-size: 26px;
+}
+
+.contact-form-section .mi-contact-box .row .form ::-webkit-input-placeholder {
+  font-weight: 600 !important;
+}
+
+.contact-form-section .mi-contact-box .row .form :-ms-input-placeholder {
+  font-weight: 600 !important;
+}
+
+.contact-form-section .mi-contact-box .row .form ::-ms-input-placeholder {
+  font-weight: 600 !important;
+}
+
+.contact-form-section .mi-contact-box .row .form ::placeholder {
+  font-weight: 600 !important;
+}
+
+.contact-form-section .mi-contact-box .row .text {
+  width: 50%;
+  padding: 146px 30px;
+}
+
+.contact-form-section .mi-contact-box:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.contact-card-section {
+  padding-bottom: 50px;
+}
+
+.contact-card-section .mi-contact-card {
+  padding: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.contact-card-section .mi-contact-card .icon {
+  width: 38%;
+  margin: 0px auto;
+  overflow: hidden;
+  border-radius: 63%;
+  height: 112px;
+}
+
+.contact-card-section .mi-contact-card .icon p {
+  text-align: center;
+  font-size: 58px;
+  margin-top: 24px;
+}
+
+.contact-card-section .mi-contact-card .details h5 {
+  text-align: center;
+  margin-top: 17px;
+  font-size: 22px;
+}
+
+.contact-card-section .mi-contact-card .details p {
+  margin-top: 19px;
+  font-family: cursive;
+  text-align: center;
+  font-size: 19px;
+}
+
+.contact-card-section .mi-contact-card:hover > .icon {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.light-brake {
+  height: 60px;
+  background: #f5f5f5;
+}
+
+.dark-brake {
+  height: 60px;
+  background: #080824;
+}
+
+label {
+  margin-bottom: 7px !important;
+  margin-left: 3px;
+}
+/*# sourceMappingURL=contact.component.css.map */

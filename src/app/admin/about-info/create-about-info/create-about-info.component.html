@@ -1,0 +1,71 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    Table header will go here
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <form [formGroup]="editForm" (ngSubmit)="create()">
+      <div class="form-group">
+        <label>title</label>
+        <input type="text" nbInput fullWidth placeholder="title" formControlName="title">
+        <div class="error"
+          *ngIf="editForm.get('title').invalid && editForm.get('title').touched || editForm.get('title').invalid && isSubmited==true">
+          This file is required</div>
+      </div>
+      <div class="form-group">
+        <label>text</label>
+        <textarea rows="5" nbInput fullWidth placeholder="text" formControlName="text"></textarea>
+        <div class="error"
+          *ngIf="editForm.get('text').invalid && editForm.get('text').touched || editForm.get('text').invalid && isSubmited==true">
+          This file is required</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 pl-0">
+          <div class="form-group">
+            <label>speaker name</label>
+            <input type="text" nbInput fullWidth placeholder="speaker name" formControlName="speaker_name">
+            <div class="error"
+              *ngIf="editForm.get('speaker_name').invalid && editForm.get('speaker_name').touched || editForm.get('speaker_name').invalid && isSubmited==true">
+              This file is required</div>
+          </div>
+        </div>
+        <div class="col-sm-6 pr-0">
+          <div class="form-group">
+            <label>speaker position</label>
+            <input type="text" nbInput fullWidth placeholder="speaker position" formControlName="speaker_position">
+            <div class="error"
+              *ngIf="editForm.get('speaker_position').invalid && editForm.get('speaker_position').touched || editForm.get('speaker_position').invalid && isSubmited==true">
+              This file is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="mi-selected-image-box" *ngIf="live_image_url || uploaded_image">
+            <img [src]="live_image_url?live_image_url:imagePath+uploaded_image" class="mi-selected-image" alt="">
+            <i class="fas fa-times" (click)="cancelimage()" *ngIf="live_image_url"></i>
+          </div>
+          <input type="file" nbInput fullWidth #image (change)="imageUpload($event);" style="display: none;">
+          <div
+            [class]="{'upload-image-button':!live_image_url || !uploaded_image,'upload-image-button-with-image':live_image_url || uploaded_image}">
+            <button nbButton status="danger" (click)="image.click();$event.preventDefault()">Upload image</button>
+          </div>
+        </div>
+        <div class="error"
+          *ngIf="editForm.get('image').invalid && editForm.get('image').touched || editForm.get('image').invalid && isSubmited==true">
+          This file is required</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 m-auto">
+          <button nbButton status="warning" class="w-100"> <span *ngIf="!create_on_process">Update</span><span
+              *ngIf="create_on_process"><i class="fa fa-cog fa-spin"></i></span> </button>
+        </div>
+      </div>
+    </form>
+  </nb-card-body>
+  <!--end of nb card body-->
+</nb-card>
+<!--end of nb-fc-card-->

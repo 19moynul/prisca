@@ -1,0 +1,14 @@
+label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: raleway;
+  margin-bottom: 1px !important;
+  color: #555;
+}
+
+.icon {
+  font-size: 46px;
+  color: #313eff;
+}
+/*# sourceMappingURL=social-list.component.css.map */

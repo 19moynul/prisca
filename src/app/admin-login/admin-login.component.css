@@ -1,0 +1,12 @@
+main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+main .login-form {
+  position: absolute;
+  top: 30%;
+  left: 29%;
+}
+/*# sourceMappingURL=admin-login.component.css.map */

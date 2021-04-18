@@ -1,0 +1,37 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    Table header will go here
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <table class="table table-bordered table-striped">
+      <thead class="thead">
+        <tr>
+          <th class="tid">id</th>
+          <th class="w-">image</th>
+          <th class="w-">text</th>
+          <th class="w-">title</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let item of data;let i=index">
+          <td>{{ i+1 }}</td>
+          <td> <img [src]="imagePath+item.image" alt="no image"> </td>
+          <td> {{ item.text }} </td>
+          <td> {{ item.title }} </td>
+          <td class="mi-action-button">
+            <button (click)="edit(item.id)" nbPopover="EDIT" nbPopoverTrigger="hover" nbPopoverPlacement="bottom"
+              class="edit"><i class="fa fa-edit"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+  <!--end of nb card body-->
+
+</nb-card>
+<!--end of nb-fc-card-->

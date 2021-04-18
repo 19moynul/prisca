@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAA;EACI,cAAc,EAAE,SAAS;EAC3B,aAAa,EAAE,SAAS;EACxB,aAAa,EAAE,IAAI;CACtB;;AAED,AAAA,CAAC,CAAA;EACK,UAAU,EAAE,OAAO;EACrB,WAAW,EAAE,OAAO;EACpB,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "other-view.component.scss"
+    ],
+    "names": [],
+    "file": "other-view.component.css"
+}

@@ -1,0 +1,144 @@
+.banner_section {
+  background-image: url("https://img.lovepik.com/photo/50010/6735.jpg_wh860.jpg");
+}
+
+.banner_section .header {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 120px 0px;
+}
+
+.banner_section .banner-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  padding: 20px;
+  font-size: 38px;
+}
+
+.container .title {
+  width: 60%;
+  margin: -43px auto 40px auto;
+  background: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.mi-member-card {
+  -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.mi-member-card .header {
+  padding: 5px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.mi-member-card .header h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.mi-member-card .body .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.mi-member-card .body .image:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.mi-member-card .body .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mi-member-card .body .overlay .social-icons {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /* -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+}
+
+.mi-member-card .body .overlay .social-icons a {
+  color: white;
+  font-size: 21px;
+  padding: 12px;
+}
+
+.mi-member-card .footer {
+  padding: 10px;
+  background-color: #42aaff;
+  border-top: 1px solid #42aaff;
+  cursor: pointer;
+}
+
+.mi-member-card .footer p {
+  font-size: 15px;
+  font-family: raleway;
+  text-align: center;
+  margin-top: 0rem !important;
+  color: #fff;
+  font-weight: 500;
+}
+
+.mi-member-card .footer .footer:hover p {
+  word-spacing: 3px !important;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.mi-sm-box {
+  text-align: center;
+  background: #f7f7f7;
+  height: 278px;
+  cursor: pointer;
+}
+
+.mi-sm-box h1 i {
+  font-size: 130px;
+  color: #ccc;
+  margin-bottom: 0px;
+  margin-top: 32px;
+}
+
+.mi-sm-box h4 {
+  margin: 0;
+  color: #ccc;
+}
+
+.mi-sm-box:hover h1 i {
+  font-size: 145px;
+  -webkit-transform: matrix3d(1, 0, 0, 0, 0.5, 0.86603, 0.5, 0, 6, -0.5, 0.86603, 0, 8, 1, 9, 1);
+          transform: matrix3d(1, 0, 0, 0, 0.5, 0.86603, 0.5, 0, 6, -0.5, 0.86603, 0, 8, 1, 9, 1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+p {
+  margin-bottom: 0rem !important;
+}
+/*# sourceMappingURL=categories.component.css.map */

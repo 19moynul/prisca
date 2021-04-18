@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+.advertisement_section {
+  margin: 71px 0px;
+}
+
+.advertisement_section .container .title {
+  width: 57%;
+  margin: -37px auto 40px auto;
+  background: white;
+  text-align: center;
+  font-family: "Monoton", cursive;
+  color: #787878;
+  font-size: 41px;
+  word-spacing: 12px;
+  font-weight: 100;
+}
+
+.advertisement_section .container .uk-slider-items .uk-panel img {
+  width: 100%;
+}
+/*# sourceMappingURL=advertisement.component.css.map */

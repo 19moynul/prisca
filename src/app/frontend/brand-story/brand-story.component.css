@@ -1,0 +1,280 @@
+.banner-section {
+  padding: 25px 0px;
+}
+
+.banner-section .mi-banner-box {
+  width: 90%;
+  margin: 0px auto;
+  height: 80vh;
+}
+
+.banner-section .mi-banner-box .left {
+  width: 50%;
+  padding: 40px;
+}
+
+.banner-section .mi-banner-box .right {
+  width: 50%;
+  padding: 15% 0px;
+}
+
+.banner-section .mi-banner-box .right h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 47px;
+  padding-right: 40px;
+}
+
+.banner-section .mi-banner-box .right p {
+  font-family: raleway;
+  margin-top: 17px;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 0px 56px;
+  line-height: 24px;
+}
+
+.story-section {
+  padding: 64px;
+}
+
+.story-section .row {
+  margin-bottom: 50px;
+}
+
+.story-section .row .text {
+  width: 50%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.story-section .row .text h2 {
+  font-size: 24px;
+}
+
+.story-section .row .text p {
+  font-family: 'Raleway';
+  letter-spacing: .5px;
+  word-spacing: 1px;
+  font-size: 15px;
+}
+
+.story-section .row .image {
+  width: 50%;
+  padding: 47px;
+}
+
+.story-section .row .image .img-box {
+  width: 20%;
+  margin: 0px auto;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.story-section .row .image .img-box img {
+  border-radius: 50%;
+}
+
+.story-section .row .image .info-text {
+  text-align: center;
+  margin-top: 11px;
+}
+
+.story-section .row .image .info-text h6 {
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+
+.story-section .row .image .info-text p {
+  font-family: raleway;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 0px !important;
+}
+
+.our-goal-section {
+  background-image: radial-gradient(circle, #4e0047, #2d0029);
+}
+
+.our-goal-section .our-goal {
+  height: 400px;
+}
+
+.our-goal-section .our-goal img {
+  height: 456px;
+  margin-top: -26px;
+  width: 89%;
+  float: right;
+}
+
+.our-goal-section .our-goal h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #baa072;
+  font-size: 30px;
+  font-family: raleway;
+  padding-top: 64px;
+}
+
+.our-goal-section .our-goal p {
+  color: #baa072;
+  text-align: justify;
+  padding-bottom: 70px;
+  font-family: raleway;
+}
+
+.who-we-are-section {
+  background: #620000;
+}
+
+.who-we-are-section .who-we-are {
+  height: 400px;
+}
+
+.who-we-are-section .who-we-are img {
+  height: 492px;
+  margin-top: -69px;
+  width: 89%;
+  float: left;
+}
+
+.who-we-are-section .who-we-are h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #baa072;
+  font-size: 30px;
+  font-family: raleway;
+  padding-top: 64px;
+}
+
+.who-we-are-section .who-we-are p {
+  color: #baa072;
+  text-align: justify;
+  padding-bottom: 70px;
+  font-family: raleway;
+}
+
+.banners-section {
+  padding: 100px 0px;
+}
+
+.banners-section .brake {
+  height: 50px;
+}
+
+.mi-dark .banner-section {
+  background: #080824;
+}
+
+.mi-dark .mi-banner-box {
+  background: #080824;
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-dark .mi-banner-box .right h3 {
+  color: #fff;
+  text-shadow: 0px 2px 2px #CE5937;
+}
+
+.mi-dark .mi-banner-box .right p {
+  color: #444;
+}
+
+.mi-dark .story-section {
+  background: #080824;
+}
+
+.mi-dark .story-section .row .text {
+  background: #080824;
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-dark .story-section .row .text h2 {
+  color: #888;
+}
+
+.mi-dark .story-section .row .text p {
+  color: #888;
+}
+
+.mi-dark .story-section .row .image .img-box {
+  border: 2px solid #999;
+}
+
+.mi-dark .story-section .row .image .img-box img {
+  border: 2px solid #999;
+}
+
+.mi-dark .story-section .row .image .info-text h6 {
+  color: #fff;
+}
+
+.mi-dark .story-section .row .image .info-text p {
+  color: #ccc;
+}
+
+.mi-dark .banners-section {
+  background: #080824;
+}
+
+.mi-light .banner-section {
+  background: #f5f5f5;
+}
+
+.mi-light .mi-banner-box {
+  background: #ededed;
+  -webkit-box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+          box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+  border-radius: 15px;
+}
+
+.mi-light .mi-banner-box .right h3 {
+  color: #080824;
+}
+
+.mi-light .mi-banner-box .right p {
+  color: #444;
+}
+
+.mi-light .story-section {
+  background: #f5f5f5;
+}
+
+.mi-light .story-section .row .text {
+  background: #ededed;
+  -webkit-box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+          box-shadow: -14px -14px 9px #f6f6f6, 0px 0px 10px #777;
+}
+
+.mi-light .story-section .row .text h2 {
+  color: #01011e;
+}
+
+.mi-light .story-section .row .text p {
+  color: #666;
+  font-weight: 600;
+}
+
+.mi-light .story-section .row .image .img-box {
+  border: 2px solid #080824;
+}
+
+.mi-light .story-section .row .image .img-box img {
+  border: 2px solid #080824;
+}
+
+.mi-light .story-section .row .image .info-text h6 {
+  color: #080824;
+}
+
+.mi-light .story-section .row .image .info-text p {
+  color: #666;
+}
+
+.mi-light .banners-section {
+  background: #f5f5f5;
+}
+/*# sourceMappingURL=brand-story.component.css.map */

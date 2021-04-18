@@ -1,0 +1,14 @@
+h3 {
+  text-transform: uppercase;
+  border-bottom: 3px solid;
+  margin-bottom: 18px;
+}
+
+p {
+  text-align: justify;
+  font-family: raleway;
+  font-weight: 500;
+  color: #000;
+  line-height: 24px;
+}
+/*# sourceMappingURL=other-view.component.css.map */

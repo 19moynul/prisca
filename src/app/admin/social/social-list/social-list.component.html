@@ -1,0 +1,33 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    MANAGE SOCIAL LINK
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <table class="table table-bordered table-striped">
+      <thead class="thead">
+        <tr>
+          <th class="tid">id</th>
+          <th class="w-">icon</th>
+          <th class="w-">link</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let item of data;let i=index">
+          <td>{{ i+1 }}</td>
+          <td class="icon"><i [class]="item.icon"></i></td>
+          <td> {{ item.link }} </td>
+          <td class="mi-action-button">
+            <button (click)="edit(item.id)" nbPopover="EDIT" nbPopoverTrigger="hover" nbPopoverPlacement="bottom"
+              class="edit"><i class="fa fa-edit"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>
+<!--end of nb-fc-card-->

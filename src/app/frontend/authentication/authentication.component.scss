@@ -1,0 +1,502 @@
+//auth dark form
+.mi-auth-dark {
+  .auth-section {
+    background: #080824;
+  }
+
+  .container {
+    .mi-auth-card {
+      .login-card {
+        transition: .2s;
+        box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+
+        .row {
+          .form {
+            h3 {
+              color: #fff;
+            }
+
+            p {
+              color: #222b45;
+            }
+
+            .form-control {
+              box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+              color: #888;
+              border-color: transparent;
+            }
+
+            ::placeholder{
+              color: #555;
+            }
+
+            .login-button {
+              box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+              color: #888;
+
+              p {
+                color: #888 !important;
+              }
+            }
+
+            input {}
+          }
+
+          .text {
+            border-left: 5px solid #cbcbcb;
+
+            .row {
+              .icon {
+                width: 15%;
+
+                i {
+                  color: #fff;
+                }
+              }
+
+              .text-info {
+                width: 80%;
+
+                p {
+                  color: #666;
+
+                  strong {
+                    color: #666 !important;
+                  }
+                }
+
+                .login-button {
+                  box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+                  color: #555;
+
+                  p {
+                    color: #888 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .registration-card {
+        box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+
+        .row {
+          .form {
+            h3 {
+              color: #fff;
+            }
+
+            p {
+              color: #222b45;
+            }
+
+            .form-control {
+              box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+              color: #888;
+              border: transparent;
+              border-color: black;
+            }
+
+            ::placeholder{
+              color: #555;
+            }
+
+            .login-button {
+              box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+              color: #555;
+
+              p {
+                color: #888 !important;
+              }
+            }
+
+            input {}
+          }
+
+          .text {
+            border-left: 5px solid #cbcbcb;
+
+            .row {
+              .icon {
+                width: 15%;
+
+                i {
+                  color: #8c8c8c;
+                }
+              }
+
+              .text-info {
+                width: 80%;
+
+                p {
+                  color: #888;
+
+                  strong {
+                    color: #888 !important;
+                  }
+                }
+
+                .login-button {
+                  box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+                  color: #555;
+
+                  p {
+                    color: #888 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// auth light form
+
+.mi-auth-light {
+  .auth-section {
+    background: #d2d2d2;
+  }
+
+  .container {
+    .mi-auth-card {
+      .login-card {
+        box-shadow: -7px -7px 20px #fff, 3px 3px 20px 0 #555;
+
+        .row {
+          .form {
+            h3 {
+              color: #084fff;
+              text-shadow: 2px 2px 2px #fff;
+            }
+
+            p {
+              color: #222b45;
+            }
+
+            .form-control {
+              box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+              color: #555;
+            }
+
+            .login-button {
+              box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+              color: #555;
+              i{
+                color: #084fff !important;
+              }
+            }
+
+            input {}
+          }
+
+          .text {
+            border-left: 5px solid #cbcbcb;
+
+            .row {
+              .icon {
+                width: 15%;
+
+                i {
+                  color: #084fff;
+                }
+              }
+
+              .text-info {
+                width: 80%;
+
+                p {
+                  color: #222;
+
+                  strong {
+                    color: #222 !important;
+                  }
+                }
+
+                .login-button {
+                  box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+                  color: #555;
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .registration-card {
+        box-shadow: -7px -7px 20px #fff, 3px 3px 20px 0 #555;
+
+        .row {
+          .form {
+            h3 {
+              color: #084fff;
+              text-shadow: 2px 2px 2px #fff;
+            }
+
+            p {
+              color: #222b45;
+            }
+
+            .form-control {
+              box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+              color: #555;
+            }
+
+            .login-button {
+              box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+              color: #555;
+            }
+
+            input {}
+          }
+
+          .text {
+            border-left: 5px solid #cbcbcb;
+
+            .row {
+              .icon {
+                width: 15%;
+
+                i {
+                  color: #084fff;
+                }
+              }
+
+              .text-info {
+                width: 80%;
+
+                p {
+                  color: #222;
+
+                  strong {
+                    color: #222 !important;
+                  }
+                }
+
+                .login-button {
+                  box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+                  color: #555;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// auth page design
+
+.container {
+  padding: 30px;
+
+  .mi-auth-card {
+    .login-card {
+
+      .row {
+        .form {
+          width: 50%;
+          padding: 40px;
+
+          h3 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+          }
+          .form-group{
+            width: 88%;
+            margin: 0px auto;
+            margin-bottom: 15px;
+          }
+          .form-control {
+            width: 100%;
+            background: transparent;
+            font-size: 17px;
+            height: 50px;
+            font-weight: 600;
+          }
+
+          ::placeholder {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 15px;
+            font-family: 'Helvetica', FontAwesome, sans-serif;
+          }
+
+          .login-button {
+            width: 88%;
+            margin: 0px auto;
+            background: transparent;
+            margin-bottom: 31px;
+            cursor: pointer;
+
+            p {
+              text-align: center;
+              margin-bottom: 0px;
+              text-transform: uppercase;
+              padding: 16px;
+              font-size: 19px;
+              font-weight: 700;
+            }
+          }
+
+          input {}
+        }
+
+        .text {
+          width: 50%;
+          padding: 30px;
+
+          .row {
+            .icon {
+              width: 20%;
+              overflow: hidden;
+              font-size: 48px;
+            }
+
+            .text-info {
+              p {
+                font-family: raleway;
+                font-size: 15px;
+                margin-top: 13px;
+
+                .number {
+                  font-family: cursive;
+
+                }
+              }
+
+              .login-button {
+                width: 70%;
+                margin: 0px auto;
+                background: transparent;
+                margin-bottom: 31px;
+                cursor: pointer;
+
+                p {
+                  text-align: center;
+                  margin-bottom: 0px;
+                  text-transform: uppercase;
+                  padding: 16px;
+                  font-size: 16px;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .registration-card {
+
+      .row {
+        margin-bottom: 10px;
+
+        .form {
+          width: 50%;
+          padding: 40px;
+
+          h3 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+          }
+
+          .form-group{
+            width: 88%;
+            margin: 0px auto;
+            margin-bottom: 10px;
+          }
+          .form-control {
+            width: 100%;
+            margin: 0px auto;
+            background: transparent;
+            font-size: 17px;
+            height: 50px;
+            font-weight: 600;
+          }
+
+          ::placeholder {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 15px;
+            font-family: 'Helvetica', FontAwesome, sans-serif;
+          }
+
+          .login-button {
+            width: 82%;
+            margin: 0px auto;
+            background: transparent;
+            margin-bottom: 31px;
+            cursor: pointer;
+
+            p {
+              text-align: center;
+              margin-bottom: 0px;
+              text-transform: uppercase;
+              padding: 16px;
+              font-size: 19px;
+              font-weight: 700;
+            }
+          }
+
+          input {}
+        }
+
+        .text {
+          width: 50%;
+          padding: 80px 30px 30px 30px;
+
+          .row {
+            .icon {
+              width: 20%;
+              overflow: hidden;
+              font-size: 48px;
+            }
+
+            .text-info {
+              p {
+                font-family: raleway;
+                font-size: 15px;
+                margin-top: 13px;
+
+                .number {
+                  font-family: cursive;
+
+                }
+              }
+
+              .login-button {
+                width: 82%;
+                margin: 0px auto;
+                background: transparent;
+                margin-bottom: 31px;
+                cursor: pointer;
+
+                p {
+                  text-align: center;
+                  margin-bottom: 0px;
+                  text-transform: uppercase;
+                  padding: 16px;
+                  font-size: 16px;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

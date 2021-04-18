@@ -1,0 +1,514 @@
+.mi-auth-dark .auth-section {
+  background: #080824;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card {
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form h3 {
+  color: #fff;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form p {
+  color: #222b45;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form .form-control {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #888;
+  border-color: transparent;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form ::-webkit-input-placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form :-ms-input-placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form ::-ms-input-placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form ::placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form .login-button {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #888;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .form .login-button p {
+  color: #888 !important;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text {
+  border-left: 5px solid #cbcbcb;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .icon {
+  width: 15%;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .icon i {
+  color: #fff;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .text-info {
+  width: 80%;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .text-info p {
+  color: #666;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .text-info p strong {
+  color: #666 !important;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .text-info .login-button {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .login-card .row .text .row .text-info .login-button p {
+  color: #888 !important;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card {
+  -webkit-box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 4px 4px 10px #000;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form h3 {
+  color: #fff;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form p {
+  color: #222b45;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form .form-control {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #888;
+  border: transparent;
+  border-color: black;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form ::-webkit-input-placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form :-ms-input-placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form ::-ms-input-placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form ::placeholder {
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form .login-button {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .form .login-button p {
+  color: #888 !important;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text {
+  border-left: 5px solid #cbcbcb;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .icon {
+  width: 15%;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .icon i {
+  color: #8c8c8c;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .text-info {
+  width: 80%;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .text-info p {
+  color: #888;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .text-info p strong {
+  color: #888 !important;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .text-info .login-button {
+  -webkit-box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+          box-shadow: -3px -2px 12px #060635, 2px 2px 10px #000;
+  color: #555;
+}
+
+.mi-auth-dark .container .mi-auth-card .registration-card .row .text .row .text-info .login-button p {
+  color: #888 !important;
+}
+
+.mi-auth-light .auth-section {
+  background: #d2d2d2;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card {
+  -webkit-box-shadow: -7px -7px 20px #fff, 3px 3px 20px 0 #555;
+          box-shadow: -7px -7px 20px #fff, 3px 3px 20px 0 #555;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .form h3 {
+  color: #084fff;
+  text-shadow: 2px 2px 2px #fff;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .form p {
+  color: #222b45;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .form .form-control {
+  -webkit-box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+          box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+  color: #555;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .form .login-button {
+  -webkit-box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+          box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+  color: #555;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .form .login-button i {
+  color: #084fff !important;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text {
+  border-left: 5px solid #cbcbcb;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text .row .icon {
+  width: 15%;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text .row .icon i {
+  color: #084fff;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text .row .text-info {
+  width: 80%;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text .row .text-info p {
+  color: #222;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text .row .text-info p strong {
+  color: #222 !important;
+}
+
+.mi-auth-light .container .mi-auth-card .login-card .row .text .row .text-info .login-button {
+  -webkit-box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+          box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+  color: #555;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card {
+  -webkit-box-shadow: -7px -7px 20px #fff, 3px 3px 20px 0 #555;
+          box-shadow: -7px -7px 20px #fff, 3px 3px 20px 0 #555;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .form h3 {
+  color: #084fff;
+  text-shadow: 2px 2px 2px #fff;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .form p {
+  color: #222b45;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .form .form-control {
+  -webkit-box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+          box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+  color: #555;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .form .login-button {
+  -webkit-box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+          box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+  color: #555;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text {
+  border-left: 5px solid #cbcbcb;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text .row .icon {
+  width: 15%;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text .row .icon i {
+  color: #084fff;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text .row .text-info {
+  width: 80%;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text .row .text-info p {
+  color: #222;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text .row .text-info p strong {
+  color: #222 !important;
+}
+
+.mi-auth-light .container .mi-auth-card .registration-card .row .text .row .text-info .login-button {
+  -webkit-box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+          box-shadow: -4px -4px 7px #fff, 3px 3px 4px 0 #555;
+  color: #555;
+}
+
+.container {
+  padding: 30px;
+}
+
+.container .mi-auth-card .login-card .row .form {
+  width: 50%;
+  padding: 40px;
+}
+
+.container .mi-auth-card .login-card .row .form h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.container .mi-auth-card .login-card .row .form .form-group {
+  width: 88%;
+  margin: 0px auto;
+  margin-bottom: 15px;
+}
+
+.container .mi-auth-card .login-card .row .form .form-control {
+  width: 100%;
+  background: transparent;
+  font-size: 17px;
+  height: 50px;
+  font-weight: 600;
+}
+
+.container .mi-auth-card .login-card .row .form ::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .login-card .row .form :-ms-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .login-card .row .form ::-ms-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .login-card .row .form ::placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .login-card .row .form .login-button {
+  width: 88%;
+  margin: 0px auto;
+  background: transparent;
+  margin-bottom: 31px;
+  cursor: pointer;
+}
+
+.container .mi-auth-card .login-card .row .form .login-button p {
+  text-align: center;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.container .mi-auth-card .login-card .row .text {
+  width: 50%;
+  padding: 30px;
+}
+
+.container .mi-auth-card .login-card .row .text .row .icon {
+  width: 20%;
+  overflow: hidden;
+  font-size: 48px;
+}
+
+.container .mi-auth-card .login-card .row .text .row .text-info p {
+  font-family: raleway;
+  font-size: 15px;
+  margin-top: 13px;
+}
+
+.container .mi-auth-card .login-card .row .text .row .text-info p .number {
+  font-family: cursive;
+}
+
+.container .mi-auth-card .login-card .row .text .row .text-info .login-button {
+  width: 70%;
+  margin: 0px auto;
+  background: transparent;
+  margin-bottom: 31px;
+  cursor: pointer;
+}
+
+.container .mi-auth-card .login-card .row .text .row .text-info .login-button p {
+  text-align: center;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container .mi-auth-card .registration-card .row {
+  margin-bottom: 10px;
+}
+
+.container .mi-auth-card .registration-card .row .form {
+  width: 50%;
+  padding: 40px;
+}
+
+.container .mi-auth-card .registration-card .row .form h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.container .mi-auth-card .registration-card .row .form .form-group {
+  width: 88%;
+  margin: 0px auto;
+  margin-bottom: 10px;
+}
+
+.container .mi-auth-card .registration-card .row .form .form-control {
+  width: 100%;
+  margin: 0px auto;
+  background: transparent;
+  font-size: 17px;
+  height: 50px;
+  font-weight: 600;
+}
+
+.container .mi-auth-card .registration-card .row .form ::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .registration-card .row .form :-ms-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .registration-card .row .form ::-ms-input-placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .registration-card .row .form ::placeholder {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.container .mi-auth-card .registration-card .row .form .login-button {
+  width: 82%;
+  margin: 0px auto;
+  background: transparent;
+  margin-bottom: 31px;
+  cursor: pointer;
+}
+
+.container .mi-auth-card .registration-card .row .form .login-button p {
+  text-align: center;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.container .mi-auth-card .registration-card .row .text {
+  width: 50%;
+  padding: 80px 30px 30px 30px;
+}
+
+.container .mi-auth-card .registration-card .row .text .row .icon {
+  width: 20%;
+  overflow: hidden;
+  font-size: 48px;
+}
+
+.container .mi-auth-card .registration-card .row .text .row .text-info p {
+  font-family: raleway;
+  font-size: 15px;
+  margin-top: 13px;
+}
+
+.container .mi-auth-card .registration-card .row .text .row .text-info p .number {
+  font-family: cursive;
+}
+
+.container .mi-auth-card .registration-card .row .text .row .text-info .login-button {
+  width: 82%;
+  margin: 0px auto;
+  background: transparent;
+  margin-bottom: 31px;
+  cursor: pointer;
+}
+
+.container .mi-auth-card .registration-card .row .text .row .text-info .login-button p {
+  text-align: center;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=authentication.component.css.map */

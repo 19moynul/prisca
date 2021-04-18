@@ -1,0 +1,61 @@
+<section class="mi-featured-section">
+  <div class="container">
+    <hr class="title-border">
+    <h2 class="title">LET'S SEE BEST WINTER COLLECTION</h2>
+    <div class="uk-slider-container-offset" uk-slider>
+
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+        <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+          <li *ngFor="let item of data">
+            <div class="uk-card uk-card-default">
+              <div class="uk-card-media-top">
+                <img [src]="imagePath+item.main_image" alt="">
+
+              </div>
+              <div class="uk-card-body">
+                <h3 class="uk-card-title">{{item.product_name}}</h3>
+                <p class="short-info">{{item.short_description|slice:0:50}}</p>
+                <p class="descriptif" (click)="productDetails(item.id,'')">descriptif</p>
+                <div class="price">
+                  <p (click)="productDetails(item.product_name,1)">prix sympathisant</p>
+                  <p (click)="productDetails(item.product_name,2)">prix abonné</p>
+                  <p (click)="productDetails(item.product_name,3)">prix coffret cadeau</p>
+                </div>
+                <div class="row mr-0 ml-0">
+                  <div class="col-sm-8 pl-0 pr-0">
+                    <p class="main-price-text">Prix à l'unité</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <p class="main-price">$ {{item.price}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mi-card-footer">
+                <div class="row mr-0 ml-0">
+                  <button nbButton class="b-button" status="info"><i class="fas fa-eye pr-1" (click)="productDetails(item.product_name,0)"></i>VIEW PRODUCT</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="uk-card uk-card-default">
+              <div class="mi-sm-box">
+                <h1 class="m-0"><i class="fa fa-eye"></i></h1>
+                <h4>SEE MORE</h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+          uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+          uk-slider-item="next"></a>
+
+      </div>
+
+      <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+    </div>
+  </div>
+</section>

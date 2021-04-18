@@ -1,0 +1,87 @@
+<ngx-navbar></ngx-navbar>
+<main [class]="{'mi-dark':!light_theme, 'mi-light':light_theme}">
+  <section class="banner-section" *ngIf="banner">
+  <div class="mi-banner-box">
+    <div class="row">
+      <div class="left">
+        <img [src]="imagePath+banner.image" alt="">
+      </div>
+      <div class="right">
+        <h3>{{banner.title}}</h3>
+        <p>
+          {{banner.subtitle}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="story-section">
+  <div class="container">
+    <div class="row" *ngFor="let data of speech;let first=first;let last=last">
+      <div class="image" *ngIf="last">
+        <div class="img-box">
+          <img [src]="imagePath+data.image" alt="">
+        </div>
+        <div class="info-text">
+          <h6>MD ALEX HUSSAIN</h6>
+          <p>CEO ,brand</p>
+        </div>
+      </div>
+      <div class="text">
+        <h2>{{data.title}}</h2>
+        <p>
+          {{data.text}}
+        </p>
+      </div>
+      <div class="image" *ngIf="first">
+        <div class="img-box">
+          <img [src]="imagePath+data.image" alt="">
+        </div>
+        <div class="info-text">
+          <h6>{{data.speaker_name}}</h6>
+          <p>{{ data.speaker_position }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="banners-section" *ngIf="banner">
+<div *ngFor="let banner of banners;let f=first;let l=last">
+  <section class="who-we-are-section" *ngIf="f">
+    <div class="who-we-are">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img [src]="imagePath+banner.image" alt="no image">
+          </div>
+          <div class="col-sm-6">
+            <h5>{{banner.title}}</h5>
+            <p>{{banner.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="brake"></div>
+
+  <section class="our-goal-section" *ngIf="l">
+    <div class="our-goal">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+             <h5>{{banner.title}}</h5>
+             <p>{{banner.text}}</p>
+          </div>
+          <div class="col-sm-6">
+            <img [src]="imagePath+banner.image" alt="no image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</div>
+</main>
+<ngx-footer-part></ngx-footer-part>
+<nb-layout style="display: none"></nb-layout>

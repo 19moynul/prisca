@@ -1,0 +1,96 @@
+<nb-card status="success">
+  <!--start of mi-fc-card-->
+  <nb-card-header>
+    <!--nb card header started-->
+    Table header will go here
+  </nb-card-header>
+  <!--end of nb card header-->
+  <nb-card-body>
+    <!--nb card body started-->
+    <table class="table table-bordered table-striped">
+      <thead class="thead">
+        <tr>
+          <th class="tid">id</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>email</th>
+          <th>status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr>
+          <!--search section-->
+          <td>
+            <form [formGroup]="searchForm">
+              <nb-select fullWidth placeholder="SORT" formControlName="sort">
+                <nb-option value="ASC">ASC</nb-option>
+                <nb-option value="DESC">DESC</nb-option>
+              </nb-select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" name="first_name" placeholder="Search ...."
+                formControlName="first_name" [nbAutocomplete]="first_name" autocomplete="off" />
+              <nb-autocomplete fullWidth #first_name>
+                <nb-option *ngFor="let data of all_first_name " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" name="last_name" placeholder="Search ...."
+                formControlName="last_name" [nbAutocomplete]="last_name" autocomplete="off" />
+              <nb-autocomplete fullWidth #last_name>
+                <nb-option *ngFor="let data of all_last_name " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="searchForm">
+              <input #autoInput nbInput type="text" (input)="search($event)" name="email" placeholder="Search ...."
+                formControlName="email" [nbAutocomplete]="email" autocomplete="off" />
+              <nb-autocomplete fullWidth #email>
+                <nb-option *ngFor="let data of all_email " value="{{ data.value }}">
+                  {{ data.text }}
+                </nb-option>
+              </nb-autocomplete>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="searchForm">
+              <nb-select formControlName="status" placeholder="status">
+                <nb-option value='-1'>SELECT</nb-option>
+                <nb-option value='1'>ACTIVE</nb-option>
+                <nb-option value='0'>DEACTIVE</nb-option>
+              </nb-select>
+            </form>
+          </td>
+          <td>
+            <button nbButton status="info" class="w-100" (click)="triggerSearch()"> <span
+                *ngIf="!search_on_process">SEARCH</span><span *ngIf="search_on_process"><i
+                  class="fa fa-cog fa-spin"></i></span> </button>
+          </td>
+        </tr>
+        <tr *ngFor="let item of data;let i=index">
+          <td>{{ i+1 }}</td>
+          <td> {{ item.first_name }} </td>
+          <td> {{ item.last_name }} </td>
+          <td> {{ item.email }} </td>
+          <td>
+            <nb-toggle [checked]="item.status==1" status="success" (change)="deactive($event,item.id)"></nb-toggle>
+          </td>
+          <td class="mi-action-button">
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </nb-card-body>
+</nb-card>
+<!--end of nb-fc-card-->

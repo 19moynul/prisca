@@ -1,0 +1,273 @@
+.navbar {
+  background: black !important;
+  color: white !important;
+  padding: 14px 0px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: white;
+}
+
+.navbar .nav-link {
+  color: #ababab;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: raleway;
+  cursor: pointer;
+}
+
+.navbar .nav-link .cart {
+  border: 1px solid #222;
+  background: #222;
+  border-radius: 50%;
+  padding: 10px 11px;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 3px 3px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navbar .nav-link .cart:hover {
+  background: #ff1274 !important;
+  color: white !important;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.navbar .nav-link .number {
+  background: #ff1274;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  margin-left: -10px;
+  margin-top: -33px !important;
+  display: inline-block;
+}
+
+.navbar .nav-link .login {
+  background: #ff1274;
+  color: white;
+  padding: 8px 17px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar .border-top-to-bottom {
+  border-right: 4px solid #ff1274;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 38px;
+}
+
+.navbar .search {
+  padding: 9px 20px;
+  background: #222;
+}
+
+.navbar .search:hover {
+  background: #ff1274 !important;
+  color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.mi-light-bar {
+  background: white;
+}
+
+.mi-light-bar .rightbutton::before {
+  color: black;
+  background: rgba(2, 0, 36, 0.3);
+}
+
+.mi-dark-bar {
+  background: black;
+}
+
+.mi-dark-bar .rightbutton::before {
+  color: black;
+  background: rgba(2, 0, 36, 0.3);
+}
+
+.mi-dark-bar .light {
+  color: #888;
+}
+
+.mi-dark-bar .dark {
+  color: #888;
+}
+
+.sticky-bar {
+  position: fixed;
+  width: auto;
+  float: right;
+  margin-top: 39vh;
+  margin-left: -193px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: 999;
+  margin-left: -197px;
+  /* Rounded sliders */
+}
+
+.sticky-bar .body {
+  padding: 11px;
+  background: #00ccad;
+}
+
+.sticky-bar .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 0px;
+}
+
+.sticky-bar .light {
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 700;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 800;
+  margin-right: 10px;
+  margin-bottom: 0px !important;
+  color: #fff;
+}
+
+.sticky-bar .dark {
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 700;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 800;
+  margin-right: 10px;
+  margin-bottom: 0px !important;
+  color: #fff;
+}
+
+.sticky-bar .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sticky-bar .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sticky-bar .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sticky-bar input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.sticky-bar input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.sticky-bar input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.sticky-bar .slider.round {
+  border-radius: 34px;
+}
+
+.sticky-bar .slider.round:before {
+  border-radius: 50%;
+}
+
+.sticky-bar .rightbutton::before {
+  content: ' \21c4';
+  font-size: 28px;
+  padding: 7px;
+  position: absolute;
+  border-radius: 0px 8px 8px 0px;
+  color: white;
+}
+
+.logo {
+  width: 58px;
+  padding: 0px;
+  margin-bottom: -19px;
+  margin-top: -19px;
+}
+
+.sticky-bar:hover {
+  margin-left: 0px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.sticky-bar:hover > .rightbutton {
+  background-color: #eee;
+  color: black;
+}
+
+#product-dropdown {
+  cursor: pointer;
+}
+
+#main-drop:hover > #dropdown-menu {
+  display: block;
+  margin-top: -11px;
+}
+
+.dropdown-menu {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  background: #390047;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-menu .dropdown-item {
+  border-bottom: 1px solid #fff !important;
+  padding: 10px !important;
+  text-transform: uppercase !important;
+  font-family: raleway !important;
+  font-weight: 700 !important;
+  color: #ffff;
+}
+
+.dropdown-menu .dropdown-item :last-child {
+  border-bottom: 0px solid #fff !important;
+}
+
+.dropdown-menu :hover {
+  background-color: #ff1274;
+  border-bottom: 1px solid #ff1274 !important;
+  color: white;
+}
+
+.margin {
+  margin-top: 67px;
+}
+/*# sourceMappingURL=navbar.component.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACL,cAAc,EAAE,SAAS;EACzB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,OAAO;EACpB,aAAa,EAAE,cAAc;EAC7B,KAAK,EAAE,IAAI;CACV;;AAED,AAAA,KAAK,CAAA;EACH,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAO;CACf",
+    "sources": [
+        "social-list.component.scss"
+    ],
+    "names": [],
+    "file": "social-list.component.css"
+}
